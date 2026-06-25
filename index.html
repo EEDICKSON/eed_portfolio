@@ -27,11 +27,51 @@
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="description"        content="Eric Edwin Dickson — IT professional, educator, full-stack developer, and AI engineer based at the University of Liberia." />
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://eedickson.github.io" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Favicon (inline SVG — no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232563EB'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='28' fill='white'>EED</text></svg>" />
+
   <!-- Google Fonts: Plus Jakarta Sans (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eric Edwin Dickson",
+    "url": "https://eedickson.github.io",
+    "image": "https://eedickson.github.io/image/eedimage.jpeg",
+    "jobTitle": "IT Professional & Web Developer",
+    "description": "MCA graduate, Harvard CS50x certified, IBM AI specialist, and university lecturer with 8+ years at the University of Liberia.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "University of Liberia"
+    },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "RK University, India" },
+      { "@type": "EducationalOrganization", "name": "University of Liberia" }
+    ],
+    "knowsAbout": ["Web Development", "Artificial Intelligence", "Full-Stack Development", "IT Management", "Computer Science Education"],
+    "email": "e.dickson100@gmail.com",
+    "telephone": "+231770309889",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fendall",
+      "addressCountry": "LR"
+    },
+    "sameAs": [
+      "https://github.com/EEDICKSON"
+    ]
+  }
+  </script>
 
   <style>
     /* ════════════════════════════════════════════
@@ -1089,7 +1129,7 @@
 <!-- ══════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════ -->
-<header class="hero">
+<header class="hero" aria-labelledby="hero-heading">
   <div class="container">
     <div class="hero__inner">
       <!-- Text -->
@@ -1101,7 +1141,7 @@
         </div>
 
         <!-- UPDATE: name -->
-        <h1 class="hero__name">Eric Edwin<br>Dickson</h1>
+        <h1 class="hero__name" id="hero-heading">Eric Edwin<br>Dickson</h1>
 
         <!-- UPDATE: subtitle -->
         <p class="hero__title">MCA · Web Technology Specialist · AI Engineer</p>
@@ -1161,8 +1201,11 @@
             <i class="fas fa-briefcase"></i> Hire Me
           </a>
           <a href="https://github.com/EEDICKSON" target="_blank" rel="noopener" class="btn-secondary">
-            <!-- UPDATE: change to your GitHub username if it changes -->
             <i class="fab fa-github"></i> GitHub
+          </a>
+          <!-- UPDATE: replace with your actual LinkedIn URL -->
+          <a href="https://linkedin.com/in/eric-edwin-dickson" target="_blank" rel="noopener" class="btn-secondary">
+            <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
       </div>
@@ -1171,7 +1214,7 @@
       <div class="hero__image-col">
         <div class="hero__img-wrap">
           <!-- UPDATE: replace image/eedimage.jpeg with your photo path -->
-          <img src="image/eedimage.jpeg" alt="Eric Edwin Dickson" class="hero__img" loading="eager" decoding="async" />
+          <img src="image/eedimage.jpeg" alt="Eric Edwin Dickson — IT Professional and Web Developer at the University of Liberia" class="hero__img" loading="eager" fetchpriority="high" decoding="async" width="280" height="280" />
           <div class="hero__badge">
             <div class="hero__badge-dot"></div>
             <div>
@@ -1188,11 +1231,11 @@
 <!-- ══════════════════════════════════════════════
      ABOUT
 ══════════════════════════════════════════════ -->
-<section id="about">
+<section id="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="reveal">
       <span class="sec-label">Background</span>
-      <h2 class="sec-title">Professional Summary</h2>
+      <h2 class="sec-title" id="about-heading">Professional Summary</h2>
       <div class="sec-divider"></div>
     </div>
 
@@ -1312,11 +1355,11 @@
 <!-- ══════════════════════════════════════════════
      SKILLS
 ══════════════════════════════════════════════ -->
-<section id="skills">
+<section id="skills" aria-labelledby="skills-heading">
   <div class="container">
     <div class="reveal">
       <span class="sec-label">Expertise</span>
-      <h2 class="sec-title">Technical Skills</h2>
+      <h2 class="sec-title" id="skills-heading">Technical Skills</h2>
       <div class="sec-divider"></div>
     </div>
 
@@ -1389,11 +1432,11 @@
 <!-- ══════════════════════════════════════════════
      EXPERIENCE — DUAL TRACK TIMELINE
 ══════════════════════════════════════════════ -->
-<section id="experience" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)">
+<section id="experience" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)" aria-labelledby="experience-heading">
   <div class="container">
     <div class="reveal">
       <span class="sec-label">Career</span>
-      <h2 class="sec-title">Professional Experience</h2>
+      <h2 class="sec-title" id="experience-heading">Professional Experience</h2>
       <div class="sec-divider"></div>
     </div>
 
@@ -1501,11 +1544,11 @@
 <!-- ══════════════════════════════════════════════
      EDUCATION
 ══════════════════════════════════════════════ -->
-<section id="education">
+<section id="education" aria-labelledby="education-heading">
   <div class="container">
     <div class="reveal">
       <span class="sec-label">Academic Background</span>
-      <h2 class="sec-title">Education</h2>
+      <h2 class="sec-title" id="education-heading">Education</h2>
       <div class="sec-divider"></div>
     </div>
 
@@ -1566,11 +1609,11 @@
 <!-- ══════════════════════════════════════════════
      PROJECTS
 ══════════════════════════════════════════════ -->
-<section id="projects" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)">
+<section id="projects" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)" aria-labelledby="projects-heading">
   <div class="container">
     <div class="reveal">
       <span class="sec-label">Engineering</span>
-      <h2 class="sec-title">Selected Projects</h2>
+      <h2 class="sec-title" id="projects-heading">Selected Projects</h2>
       <div class="sec-divider"></div>
     </div>
 
@@ -1762,11 +1805,11 @@
 <!-- ══════════════════════════════════════════════
      FREELANCE / HIRE ME + GOOGLE FORM
 ══════════════════════════════════════════════ -->
-<section id="freelance">
+<section id="freelance" aria-labelledby="freelance-heading">
   <div class="container">
     <div class="reveal">
       <span class="sec-label">Freelance Services</span>
-      <h2 class="sec-title">Need a website built?</h2>
+      <h2 class="sec-title" id="freelance-heading">Need a website built?</h2>
       <div class="sec-divider"></div>
     </div>
 
@@ -1819,20 +1862,74 @@
       </div>
 
       <div>
-        <!-- UPDATE: replace form URL if you ever rebuild the Google Form -->
+        <!-- Native contact form — replace YOUR_FORMSPREE_ID with your actual Formspree endpoint from formspree.io -->
         <div class="form-embed">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSc-XejLru82YcqlPCLTx_9D4tD84bQO6R5gC0RYdSljY7x4Sw/viewform?embedded=true"
-            width="100%" height="640"
-            frameborder="0" marginheight="0" marginwidth="0"
-            title="Website Project Discovery Form"
-            loading="lazy"
-            style="display:block"
-          >Loading…</iframe>
+          <form
+            id="projectForm"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+            style="display:flex; flex-direction:column; gap:14px;"
+          >
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+              <div>
+                <label for="fc-name" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Full Name *</label>
+                <input id="fc-name" type="text" name="name" required placeholder="Jane Smith"
+                  style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease;"
+                  onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'" />
+              </div>
+              <div>
+                <label for="fc-email" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Email Address *</label>
+                <input id="fc-email" type="email" name="email" required placeholder="jane@example.com"
+                  style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease;"
+                  onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'" />
+              </div>
+            </div>
+            <div>
+              <label for="fc-service" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Service Needed *</label>
+              <select id="fc-service" name="service" required
+                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease; cursor:pointer;"
+                onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'">
+                <option value="" disabled selected>Select a service…</option>
+                <option>Full-Stack Web Development</option>
+                <option>AI Feature Integration</option>
+                <option>Site Maintenance &amp; Optimisation</option>
+                <option>Technical Training &amp; Workshops</option>
+                <option>Other / Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="fc-budget" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Approximate Budget (USD)</label>
+              <select id="fc-budget" name="budget"
+                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease; cursor:pointer;"
+                onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'">
+                <option value="" selected>Prefer not to say</option>
+                <option>Under $500</option>
+                <option>$500 – $1,500</option>
+                <option>$1,500 – $5,000</option>
+                <option>$5,000+</option>
+              </select>
+            </div>
+            <div>
+              <label for="fc-message" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Project Description *</label>
+              <textarea id="fc-message" name="message" required rows="5" placeholder="Tell me about your project — what it does, who it's for, and any deadlines…"
+                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; resize:vertical; transition:border-color 0.18s ease; line-height:1.55;"
+                onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+            </div>
+            <button type="submit" id="fc-submit"
+              style="display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 28px; border-radius:9px; border:none; background:var(--blue); color:#fff; font-size:0.9rem; font-weight:600; font-family:var(--font-body); cursor:pointer; transition:background 0.18s ease, transform 0.18s ease;">
+              <i class="fas fa-paper-plane"></i> Send Enquiry
+            </button>
+            <div id="fc-success" role="alert" aria-live="polite" style="display:none; padding:12px 16px; border-radius:8px; background:var(--green-muted); border:1px solid rgba(16,185,129,0.25); color:var(--green); font-size:0.875rem; font-weight:500;">
+              <i class="fas fa-check-circle"></i> Message sent! I'll reply within 48 hours.
+            </div>
+            <div id="fc-error" role="alert" aria-live="polite" style="display:none; padding:12px 16px; border-radius:8px; background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.2); color:#EF4444; font-size:0.875rem; font-weight:500;">
+              <i class="fas fa-exclamation-circle"></i> Something went wrong. Please email me directly at <a href="mailto:e.dickson100@gmail.com" style="color:inherit; text-decoration:underline;">e.dickson100@gmail.com</a>.
+            </div>
+          </form>
         </div>
         <p class="form-embed__note">
           <i class="fas fa-lock" style="color:var(--green); margin-right:4px"></i>
-          Handled securely via Google Forms. Used only to discuss your project.
+          Your details are used only to discuss your project and are never shared.
         </p>
       </div>
     </div>
@@ -1842,11 +1939,11 @@
 <!-- ══════════════════════════════════════════════
      CONTACT
 ══════════════════════════════════════════════ -->
-<section id="contact" style="background:var(--surface); border-top:1px solid var(--border)">
+<section id="contact" style="background:var(--surface); border-top:1px solid var(--border)" aria-labelledby="contact-heading">
   <div class="container">
     <div class="reveal" style="text-align:center; margin-bottom:40px">
       <span class="sec-label">Get In Touch</span>
-      <h2 class="sec-title">Contact</h2>
+      <h2 class="sec-title" id="contact-heading">Contact</h2>
       <p style="color:var(--text-secondary); max-width:480px; margin:0 auto">
         Open to academic networking, technical consulting, and enterprise web implementation opportunities.
       </p>
@@ -1876,10 +1973,14 @@
       <a href="https://github.com/EEDICKSON" target="_blank" rel="noopener" class="social-btn">
         <i class="fab fa-github"></i> GitHub
       </a>
-      <!-- UPDATE: add your LinkedIn URL when ready -->
+      <!-- UPDATE: replace # with your actual LinkedIn profile URL, e.g. https://linkedin.com/in/your-handle -->
+      <a href="https://linkedin.com/in/eric-edwin-dickson" target="_blank" rel="noopener" class="social-btn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
       <a href="#freelance" class="social-btn" style="background:var(--blue); color:#fff; border-color:var(--blue)">
         <i class="fas fa-briefcase"></i> Start a Project
       </a>
+      <!-- UPDATE: confirm resume.pdf is at the repo root, or replace with absolute URL -->
       <a href="resume.pdf" download class="social-btn">
         <i class="fas fa-download"></i> Download CV
       </a>
@@ -1902,9 +2003,7 @@
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════════════ */
+
 <script>
   /* ─── THEME ─── */
   const html       = document.documentElement;
@@ -1922,10 +2021,10 @@
     applyTheme(html.getAttribute('data-theme') !== 'dark');
   });
 
-  // Sync icon on load
+  
   themeIcon.className = html.getAttribute('data-theme') === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
-  /* ─── MOBILE NAV ─── */
+ 
   const menuBtn   = document.getElementById('menuBtn');
   const navLinks  = document.getElementById('navLinks');
 
@@ -1934,7 +2033,6 @@
     menuBtn.setAttribute('aria-expanded', open);
   });
 
-  // Close on link click
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -1942,29 +2040,68 @@
     });
   });
 
-  /* ─── PROGRESS BAR ─── */
-  const bar = document.getElementById('progress');
-  window.addEventListener('scroll', () => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    bar.style.width = (scrollTop / (scrollHeight - clientHeight) * 100) + '%';
-  }, { passive: true });
-
-  /* ─── ACTIVE NAV LINK ─── */
-  const sections  = document.querySelectorAll('section[id]');
+  
+  const bar        = document.getElementById('progress');
+  const sections   = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav__links a');
+  let   rafPending = false;
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navAnchors.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  }, { passive: true });
+  function onScroll() {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      // Progress bar
+      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+      bar.style.width = (scrollTop / (scrollHeight - clientHeight) * 100) + '%';
 
-  /* ─── SCROLL REVEAL ─── */
-  // Only activate after page load — content stays visible if JS fails
+      // Active nav link
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+
+      rafPending = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const projectForm = document.getElementById('projectForm');
+  if (projectForm) {
+    projectForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn     = document.getElementById('fc-submit');
+      const success = document.getElementById('fc-success');
+      const error   = document.getElementById('fc-error');
+      btn.disabled  = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+      success.style.display = 'none';
+      error.style.display   = 'none';
+      try {
+        const res = await fetch(projectForm.action, {
+          method: 'POST',
+          body: new FormData(projectForm),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          success.style.display = 'block';
+          projectForm.reset();
+        } else {
+          throw new Error('Non-OK response');
+        }
+      } catch {
+        error.style.display = 'block';
+      } finally {
+        btn.disabled  = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Enquiry';
+      }
+    });
+  }
+
+  
   requestAnimationFrame(() => {
     document.body.classList.add('js-ready');
     const reveals = document.querySelectorAll('.reveal');
