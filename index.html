@@ -1,2007 +1,3319 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eric Edwin Dickson — IT Professional & Web Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Edwin Dickson — IT Professional & Web Developer</title>
 
-  <!--
+    <!--
   ╔══════════════════════════════════════════════════════════════╗
   ║  ERIC EDWIN DICKSON — PORTFOLIO  (last updated: June 2026)  ║
   ║  To update: search for "UPDATE:" comments throughout file   ║
   ╚══════════════════════════════════════════════════════════════╝
   -->
 
-  <!-- Dark mode BEFORE paint — prevents flash -->
-  <script>
-    if (localStorage.getItem('theme') === 'dark')
-      document.documentElement.setAttribute('data-theme', 'dark');
-  </script>
+    <!-- Dark mode BEFORE paint — prevents flash -->
+    <script>
+      if (localStorage.getItem("theme") === "dark")
+        document.documentElement.setAttribute("data-theme", "dark");
+    </script>
 
-  <!-- UPDATE: Change og:url to your actual GitHub Pages URL -->
-  <meta property="og:title"       content="Eric Edwin Dickson — IT Professional & Web Developer" />
-  <meta property="og:description" content="MCA (First Class), Harvard CS50x certified, IBM AI specialist, and university lecturer with 8+ years at the University of Liberia." />
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://eedickson.github.io" />
-  <meta property="og:image"       content="image/eedimage.jpeg" />
-  <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="description"        content="Eric Edwin Dickson — IT professional, educator, full-stack developer, and AI engineer based at the University of Liberia." />
+    <!-- UPDATE: Change og:url to your actual GitHub Pages URL -->
+    <meta
+      property="og:title"
+      content="Eric Edwin Dickson — IT Professional & Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="MCA (First Class), Harvard CS50x certified, IBM AI specialist, and university lecturer with 8+ years at the University of Liberia."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eedickson.github.io" />
+    <meta property="og:image" content="image/eedimage.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="description"
+      content="Eric Edwin Dickson — IT professional, educator, full-stack developer, and AI engineer based at the University of Liberia."
+    />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://eedickson.github.io" />
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://eedickson.github.io" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-  <!-- Favicon (inline SVG — no extra file needed) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232563EB'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='28' fill='white'>EED</text></svg>" />
+    <!-- Favicon (inline SVG — no extra file needed) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232563EB'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='28' fill='white'>EED</text></svg>"
+    />
 
-  <!-- Google Fonts: Plus Jakarta Sans (display) + Inter (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts: Plus Jakarta Sans (display) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Eric Edwin Dickson",
-    "url": "https://eedickson.github.io",
-    "image": "https://eedickson.github.io/image/eedimage.jpeg",
-    "jobTitle": "IT Professional & Web Developer",
-    "description": "MCA graduate, Harvard CS50x certified, IBM AI specialist, and university lecturer with 8+ years at the University of Liberia.",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "University of Liberia"
-    },
-    "alumniOf": [
-      { "@type": "EducationalOrganization", "name": "RK University, India" },
-      { "@type": "EducationalOrganization", "name": "University of Liberia" }
-    ],
-    "knowsAbout": ["Web Development", "Artificial Intelligence", "Full-Stack Development", "IT Management", "Computer Science Education"],
-    "email": "e.dickson100@gmail.com",
-    "telephone": "+231770309889",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Fendall",
-      "addressCountry": "LR"
-    },
-    "sameAs": [
-      "https://github.com/EEDICKSON"
-    ]
-  }
-  </script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Eric Edwin Dickson",
+        "url": "https://eedickson.github.io",
+        "image": "https://eedickson.github.io/image/eedimage.jpeg",
+        "jobTitle": "IT Professional & Web Developer",
+        "description": "MCA graduate, Harvard CS50x certified, IBM AI specialist, and university lecturer with 8+ years at the University of Liberia.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "University of Liberia"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "RK University, India"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Liberia"
+          }
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "Artificial Intelligence",
+          "Full-Stack Development",
+          "IT Management",
+          "Computer Science Education"
+        ],
+        "email": "e.dickson100@gmail.com",
+        "telephone": "+231770309889",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fendall",
+          "addressCountry": "LR"
+        },
+        "sameAs": ["https://github.com/EEDICKSON"]
+      }
+    </script>
 
-  <style>
-    /* ════════════════════════════════════════════
+    <style>
+      /* ════════════════════════════════════════════
        DESIGN TOKENS
     ════════════════════════════════════════════ */
-    :root {
-      /* Palette */
-      --navy:       #0A1628;
-      --blue:       #2563EB;
-      --blue-light: #3B82F6;
-      --blue-muted: rgba(37,99,235,0.08);
-      --green:      #10B981;
-      --green-muted:rgba(16,185,129,0.10);
-      --orange:     #F59E0B;
+      :root {
+        /* Palette */
+        --navy: #0a1628;
+        --blue: #2563eb;
+        --blue-light: #3b82f6;
+        --blue-muted: rgba(37, 99, 235, 0.08);
+        --green: #10b981;
+        --green-muted: rgba(16, 185, 129, 0.1);
+        --orange: #f59e0b;
 
-      /* Page */
-      --bg:         #F9FAFB;
-      --surface:    #FFFFFF;
-      --border:     #E5E7EB;
-      --border-strong: #D1D5DB;
+        /* Page */
+        --bg: #f9fafb;
+        --surface: #ffffff;
+        --border: #e5e7eb;
+        --border-strong: #d1d5db;
 
-      /* Text */
-      --text-primary:   #111827;
-      --text-secondary: #6B7280;
-      --text-tertiary:  #9CA3AF;
+        /* Text */
+        --text-primary: #111827;
+        --text-secondary: #6b7280;
+        --text-tertiary: #9ca3af;
 
-      /* Nav */
-      --nav-bg: rgba(249,250,251,0.95);
+        /* Nav */
+        --nav-bg: rgba(249, 250, 251, 0.95);
 
-      /* Type scale */
-      --font-display: 'Plus Jakarta Sans', sans-serif;
-      --font-body:    'Inter', sans-serif;
+        /* Type scale */
+        --font-display: "Plus Jakarta Sans", sans-serif;
+        --font-body: "Inter", sans-serif;
 
-      /* Spacing */
-      --section-gap: 100px;
-      --card-radius: 14px;
-      --card-padding: 28px;
+        /* Spacing */
+        --section-gap: 100px;
+        --card-radius: 14px;
+        --card-padding: 28px;
 
-      /* Transitions */
-      --t-fast: 0.18s ease;
-      --t-med:  0.28s ease;
-    }
+        /* Transitions */
+        --t-fast: 0.18s ease;
+        --t-med: 0.28s ease;
+      }
 
-    [data-theme="dark"] {
-      --bg:           #0F1117;
-      --surface:      #1A1D27;
-      --border:       #2A2D3A;
-      --border-strong:#3A3D4A;
-      --text-primary: #F3F4F6;
-      --text-secondary:#9CA3AF;
-      --text-tertiary: #6B7280;
-      --nav-bg: rgba(15,17,23,0.95);
-      --blue-muted: rgba(59,130,246,0.12);
-      --green-muted:rgba(16,185,129,0.12);
-    }
+      [data-theme="dark"] {
+        --bg: #0f1117;
+        --surface: #1a1d27;
+        --border: #2a2d3a;
+        --border-strong: #3a3d4a;
+        --text-primary: #f3f4f6;
+        --text-secondary: #9ca3af;
+        --text-tertiary: #6b7280;
+        --nav-bg: rgba(15, 17, 23, 0.95);
+        --blue-muted: rgba(59, 130, 246, 0.12);
+        --green-muted: rgba(16, 185, 129, 0.12);
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        RESET & BASE
     ════════════════════════════════════════════ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    html { scroll-behavior: smooth; color-scheme: light dark; }
+      html {
+        scroll-behavior: smooth;
+        color-scheme: light dark;
+      }
 
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text-primary);
-      line-height: 1.6;
-      transition: background var(--t-med), color var(--t-med);
-      -webkit-font-smoothing: antialiased;
-    }
+      body {
+        font-family: var(--font-body);
+        background: var(--bg);
+        color: var(--text-primary);
+        line-height: 1.6;
+        transition:
+          background var(--t-med),
+          color var(--t-med);
+        -webkit-font-smoothing: antialiased;
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        PROGRESS BAR
     ════════════════════════════════════════════ */
-    #progress {
-      position: fixed; top: 0; left: 0; z-index: 9999;
-      height: 2px; width: 0;
-      background: linear-gradient(90deg, var(--blue), var(--green));
-      transition: width 0.08s linear;
-    }
+      #progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(90deg, var(--blue), var(--green));
+        transition: width 0.08s linear;
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        NAV
     ════════════════════════════════════════════ */
-    .nav {
-      position: sticky; top: 0; z-index: 1000;
-      background: var(--nav-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      transition: background var(--t-med), border-color var(--t-med);
-    }
-
-    .nav__inner {
-      max-width: 1200px; margin: 0 auto;
-      padding: 0 24px;
-      height: 60px;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px;
-    }
-
-    .nav__logo {
-      font-family: var(--font-display);
-      font-weight: 800; font-size: 1.25rem;
-      color: var(--navy); letter-spacing: -0.5px;
-      text-decoration: none;
-      transition: color var(--t-fast);
-    }
-    [data-theme="dark"] .nav__logo { color: var(--blue-light); }
-
-    .nav__links {
-      display: flex; align-items: center; gap: 6px;
-      list-style: none;
-    }
-
-    .nav__links a {
-      font-size: 0.875rem; font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none; padding: 6px 10px;
-      border-radius: 6px;
-      transition: color var(--t-fast), background var(--t-fast);
-    }
-    .nav__links a:hover,
-    .nav__links a.active { color: var(--blue); background: var(--blue-muted); }
-
-    .nav__actions { display: flex; align-items: center; gap: 8px; }
-
-    .btn-theme {
-      width: 36px; height: 36px; border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-secondary);
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      font-size: 0.9rem;
-      transition: all var(--t-fast);
-    }
-    .btn-theme:hover { border-color: var(--blue); color: var(--blue); }
-
-    .nav__hire {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 7px 16px; border-radius: 8px;
-      background: var(--blue); color: #fff;
-      font-size: 0.8rem; font-weight: 600;
-      text-decoration: none;
-      transition: background var(--t-fast), transform var(--t-fast);
-    }
-    .nav__hire:hover { background: #1D4ED8; transform: translateY(-1px); }
-
-    .nav__hamburger {
-      display: none; width: 36px; height: 36px;
-      border-radius: 8px; border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-primary); font-size: 1.1rem;
-      cursor: pointer; align-items: center; justify-content: center;
-    }
-
-    /* Mobile nav */
-    @media (max-width: 768px) {
-      .nav__links {
-        display: none; position: absolute;
-        top: 61px; left: 0; right: 0;
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
         background: var(--nav-bg);
         backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border-bottom: 1px solid var(--border);
-        flex-direction: column; align-items: flex-start;
-        padding: 12px 24px 20px; gap: 2px;
+        transition:
+          background var(--t-med),
+          border-color var(--t-med);
       }
-      .nav__links.open { display: flex; }
-      .nav__links a { width: 100%; padding: 10px 12px; }
-      .nav__hamburger { display: flex; }
-      .nav__hire span { display: none; }
-    }
 
-    /* ════════════════════════════════════════════
+      .nav__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .nav__logo {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: var(--navy);
+        letter-spacing: -0.5px;
+        text-decoration: none;
+        transition: color var(--t-fast);
+      }
+      [data-theme="dark"] .nav__logo {
+        color: var(--blue-light);
+      }
+
+      .nav__links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        list-style: none;
+      }
+
+      .nav__links a {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition:
+          color var(--t-fast),
+          background var(--t-fast);
+      }
+      .nav__links a:hover,
+      .nav__links a.active {
+        color: var(--blue);
+        background: var(--blue-muted);
+      }
+
+      .nav__actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn-theme {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text-secondary);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        transition: all var(--t-fast);
+      }
+      .btn-theme:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+      }
+
+      .nav__hire {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 16px;
+        border-radius: 8px;
+        background: var(--blue);
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition:
+          background var(--t-fast),
+          transform var(--t-fast);
+      }
+      .nav__hire:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+      }
+
+      .nav__hamburger {
+        display: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text-primary);
+        font-size: 1.1rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Mobile nav */
+      @media (max-width: 768px) {
+        .nav__links {
+          display: none;
+          position: absolute;
+          top: 61px;
+          left: 0;
+          right: 0;
+          background: var(--nav-bg);
+          backdrop-filter: blur(12px);
+          border-bottom: 1px solid var(--border);
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 12px 24px 20px;
+          gap: 2px;
+        }
+        .nav__links.open {
+          display: flex;
+        }
+        .nav__links a {
+          width: 100%;
+          padding: 10px 12px;
+        }
+        .nav__hamburger {
+          display: flex;
+        }
+        .nav__hire span {
+          display: none;
+        }
+      }
+
+      /* ════════════════════════════════════════════
        LAYOUT HELPERS
     ════════════════════════════════════════════ */
-    .container {
-      max-width: 1200px; margin: 0 auto;
-      padding-left: 24px; padding-right: 24px;
-    }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
 
-    section { padding: var(--section-gap) 0; }
+      section {
+        padding: var(--section-gap) 0;
+      }
 
-    /* Scroll reveal — content visible by default, JS adds class to animate */
-    .reveal {
-      opacity: 1; transform: none;
-      transition: opacity 0.6s cubic-bezier(.25,1,.5,1),
-                  transform 0.6s cubic-bezier(.25,1,.5,1);
-    }
-    body.js-ready .reveal        { opacity: 0; transform: translateY(24px); }
-    body.js-ready .reveal.in-view { opacity: 1; transform: none; }
+      /* Scroll reveal — content visible by default, JS adds class to animate */
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition:
+          opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+          transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      body.js-ready .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      body.js-ready .reveal.in-view {
+        opacity: 1;
+        transform: none;
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        SECTION HEADER (reusable)
     ════════════════════════════════════════════ */
-    .sec-label {
-      display: inline-block;
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--blue); margin-bottom: 8px;
-    }
+      .sec-label {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--blue);
+        margin-bottom: 8px;
+      }
 
-    .sec-title {
-      font-family: var(--font-display);
-      font-size: 1.9rem; font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -0.5px; line-height: 1.15;
-      margin-bottom: 14px;
-    }
+      .sec-title {
+        font-family: var(--font-display);
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -0.5px;
+        line-height: 1.15;
+        margin-bottom: 14px;
+      }
 
-    .sec-divider {
-      width: 40px; height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--green));
-      border-radius: 4px; margin-bottom: 40px;
-    }
+      .sec-divider {
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--blue), var(--green));
+        border-radius: 4px;
+        margin-bottom: 40px;
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        HERO  (THE SIGNATURE ELEMENT)
        Split: text left, image right with stacked
        stat pills that encode who Eric actually is.
     ════════════════════════════════════════════ */
-    .hero {
-      padding: 90px 0 70px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero__inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 60px; align-items: center;
-    }
-
-    .hero__eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 5px 12px; border-radius: 20px;
-      background: var(--blue-muted);
-      border: 1px solid rgba(37,99,235,0.2);
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--blue); margin-bottom: 20px;
-      letter-spacing: 0.04em;
-    }
-    .hero__eyebrow i { font-size: 0.7rem; }
-
-    .hero__name {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -1.5px;
-      line-height: 1.05;
-      margin-bottom: 6px;
-    }
-
-    .hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      font-weight: 600;
-      color: var(--blue);
-      letter-spacing: -0.2px;
-      margin-bottom: 20px;
-    }
-
-    .hero__bio {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 540px;
-      line-height: 1.75;
-      margin-bottom: 28px;
-    }
-
-    /* Hero stat pills — the 4 key facts up front */
-    .hero__stats {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-bottom: 36px;
-    }
-
-    .stat-pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 8px 14px; border-radius: 10px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      font-size: 0.8rem; font-weight: 500;
-      color: var(--text-primary);
-      transition: border-color var(--t-fast), transform var(--t-fast);
-    }
-    .stat-pill:hover { border-color: var(--blue); transform: translateY(-2px); }
-    .stat-pill__icon {
-      width: 26px; height: 26px; border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.75rem; flex-shrink: 0;
-    }
-    .stat-pill__icon--blue   { background: var(--blue-muted); color: var(--blue); }
-    .stat-pill__icon--green  { background: var(--green-muted); color: var(--green); }
-    .stat-pill__icon--orange { background: rgba(245,158,11,0.1); color: var(--orange); }
-    .stat-pill__icon--navy   { background: rgba(10,22,40,0.08); color: var(--navy); }
-    [data-theme="dark"] .stat-pill__icon--navy { background: rgba(255,255,255,0.08); color: var(--text-secondary); }
-
-    .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; border-radius: 10px;
-      background: var(--blue); color: #fff;
-      font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
-    }
-    .btn-primary:hover {
-      background: #1D4ED8;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37,99,235,0.3);
-    }
-
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; border-radius: 10px;
-      background: var(--surface); color: var(--text-primary);
-      font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      transition: border-color var(--t-fast), transform var(--t-fast);
-    }
-    .btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
-
-    /* Hero image side */
-    .hero__image-col { position: relative; }
-
-    .hero__img-wrap {
-      position: relative; display: inline-block;
-    }
-
-    .hero__img {
-      width: 280px; height: 280px;
-      object-fit: cover;
-      border-radius: 24px;
-      border: 3px solid var(--surface);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.12);
-      transition: transform var(--t-med);
-      display: block;
-    }
-    [data-theme="dark"] .hero__img { box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
-    .hero__img:hover { transform: scale(1.02); }
-
-    /* Floating badge on the image */
-    .hero__badge {
-      position: absolute; bottom: -14px; right: -14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 14px;
-      display: flex; align-items: center; gap: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      white-space: nowrap;
-    }
-    .hero__badge-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--green);
-      animation: pulse 2s infinite;
-      flex-shrink: 0;
-    }
-    @keyframes pulse {
-      0%,100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
-      50%      { box-shadow: 0 0 0 6px rgba(16,185,129,0); }
-    }
-    .hero__badge-text {
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--text-primary);
-    }
-    .hero__badge-sub {
-      font-size: 0.65rem; font-weight: 400;
-      color: var(--text-secondary);
-    }
-
-    @media (max-width: 900px) {
-      .hero__inner {
-        grid-template-columns: 1fr;
-        text-align: center;
+      .hero {
+        padding: 90px 0 70px;
+        border-bottom: 1px solid var(--border);
       }
-      .hero__image-col { order: -1; display: flex; justify-content: center; }
-      .hero__stats { justify-content: center; }
-      .hero__cta { justify-content: center; }
-      .hero__bio { margin-left: auto; margin-right: auto; }
-      .hero__badge { right: 0; }
-    }
 
-    @media (max-width: 480px) {
-      .hero__img { width: 220px; height: 220px; border-radius: 18px; }
-    }
+      .hero__inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 60px;
+        align-items: center;
+      }
 
-    /* ════════════════════════════════════════════
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 12px;
+        border-radius: 20px;
+        background: var(--blue-muted);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--blue);
+        margin-bottom: 20px;
+        letter-spacing: 0.04em;
+      }
+      .hero__eyebrow i {
+        font-size: 0.7rem;
+      }
+
+      .hero__name {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -1.5px;
+        line-height: 1.05;
+        margin-bottom: 6px;
+      }
+
+      .hero__title {
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 600;
+        color: var(--blue);
+        letter-spacing: -0.2px;
+        margin-bottom: 20px;
+      }
+
+      .hero__bio {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        max-width: 540px;
+        line-height: 1.75;
+        margin-bottom: 28px;
+      }
+
+      /* Hero stat pills — the 4 key facts up front */
+      .hero__stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+
+      .stat-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 10px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        transition:
+          border-color var(--t-fast),
+          transform var(--t-fast);
+      }
+      .stat-pill:hover {
+        border-color: var(--blue);
+        transform: translateY(-2px);
+      }
+      .stat-pill__icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+      }
+      .stat-pill__icon--blue {
+        background: var(--blue-muted);
+        color: var(--blue);
+      }
+      .stat-pill__icon--green {
+        background: var(--green-muted);
+        color: var(--green);
+      }
+      .stat-pill__icon--orange {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--orange);
+      }
+      .stat-pill__icon--navy {
+        background: rgba(10, 22, 40, 0.08);
+        color: var(--navy);
+      }
+      [data-theme="dark"] .stat-pill__icon--navy {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text-secondary);
+      }
+
+      .hero__cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        background: var(--blue);
+        color: #fff;
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition:
+          background var(--t-fast),
+          transform var(--t-fast),
+          box-shadow var(--t-fast);
+      }
+      .btn-primary:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--text-primary);
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid var(--border);
+        transition:
+          border-color var(--t-fast),
+          transform var(--t-fast);
+      }
+      .btn-secondary:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+        transform: translateY(-2px);
+      }
+
+      /* Hero image side */
+      .hero__image-col {
+        position: relative;
+      }
+
+      .hero__img-wrap {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hero__img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 24px;
+        border: 3px solid var(--surface);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+        transition: transform var(--t-med);
+        display: block;
+      }
+      [data-theme="dark"] .hero__img {
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      }
+      .hero__img:hover {
+        transform: scale(1.02);
+      }
+
+      /* Floating badge on the image */
+      .hero__badge {
+        position: absolute;
+        bottom: -14px;
+        right: -14px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        white-space: nowrap;
+      }
+      .hero__badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+        animation: pulse 2s infinite;
+        flex-shrink: 0;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+        }
+      }
+      .hero__badge-text {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+      .hero__badge-sub {
+        font-size: 0.65rem;
+        font-weight: 400;
+        color: var(--text-secondary);
+      }
+
+      @media (max-width: 900px) {
+        .hero__inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero__image-col {
+          order: -1;
+          display: flex;
+          justify-content: center;
+        }
+        .hero__stats {
+          justify-content: center;
+        }
+        .hero__cta {
+          justify-content: center;
+        }
+        .hero__bio {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero__badge {
+          right: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero__img {
+          width: 220px;
+          height: 220px;
+          border-radius: 18px;
+        }
+      }
+
+      /* ════════════════════════════════════════════
        ABOUT
     ════════════════════════════════════════════ */
-    .about__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px; align-items: start;
-    }
+      .about__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+      }
 
-    .about__text p {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-      line-height: 1.8;
-    }
-    .about__text p:last-child { margin-bottom: 0; }
+      .about__text p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+        line-height: 1.8;
+      }
+      .about__text p:last-child {
+        margin-bottom: 0;
+      }
 
-    .about__mission {
-      display: flex; gap: 14px; align-items: flex-start;
-      background: var(--blue-muted);
-      border: 1px solid rgba(37,99,235,0.15);
-      border-radius: 12px; padding: 20px;
-      margin-top: 24px;
-    }
-    .about__mission i { color: var(--blue); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
-    .about__mission p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
-    .about__mission strong { color: var(--text-primary); }
+      .about__mission {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        background: var(--blue-muted);
+        border: 1px solid rgba(37, 99, 235, 0.15);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 24px;
+      }
+      .about__mission i {
+        color: var(--blue);
+        font-size: 1.1rem;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+      .about__mission p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+      }
+      .about__mission strong {
+        color: var(--text-primary);
+      }
 
-    .about__right { display: flex; flex-direction: column; gap: 16px; }
+      .about__right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
 
-    /* Quick facts card */
-    .facts-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: var(--card-padding);
-    }
-    .facts-card h3 {
-      font-family: var(--font-display);
-      font-size: 0.95rem; font-weight: 700;
-      color: var(--text-primary); margin-bottom: 16px;
-    }
-    .fact-row {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .fact-row:last-child { border-bottom: none; padding-bottom: 0; }
-    .fact-row i { width: 18px; text-align: center; color: var(--blue); font-size: 0.85rem; }
-    .fact-label { font-size: 0.75rem; color: var(--text-tertiary); font-weight: 500; display: block; }
-    .fact-value { font-size: 0.875rem; color: var(--text-primary); font-weight: 500; }
+      /* Quick facts card */
+      .facts-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: var(--card-padding);
+      }
+      .facts-card h3 {
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+      .fact-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .fact-row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .fact-row i {
+        width: 18px;
+        text-align: center;
+        color: var(--blue);
+        font-size: 0.85rem;
+      }
+      .fact-label {
+        font-size: 0.75rem;
+        color: var(--text-tertiary);
+        font-weight: 500;
+        display: block;
+      }
+      .fact-value {
+        font-size: 0.875rem;
+        color: var(--text-primary);
+        font-weight: 500;
+      }
 
-    /* Currently learning widget */
-    .learning-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: var(--card-padding);
-    }
-    .learning-card h3 {
-      font-family: var(--font-display);
-      font-size: 0.95rem; font-weight: 700;
-      color: var(--text-primary); margin-bottom: 14px;
-      display: flex; align-items: center; gap: 8px;
-    }
-    .live-dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: var(--green);
-      animation: pulse-sm 2s infinite;
-      display: inline-block;
-    }
-    @keyframes pulse-sm {
-      0%,100% { opacity: 1; }
-      50%      { opacity: 0.4; }
-    }
-    .learning-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .learn-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 12px; border-radius: 20px;
-      background: var(--green-muted);
-      border: 1px solid rgba(16,185,129,0.2);
-      font-size: 0.78rem; font-weight: 500;
-      color: var(--green);
-    }
+      /* Currently learning widget */
+      .learning-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: var(--card-padding);
+      }
+      .learning-card h3 {
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .live-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--green);
+        animation: pulse-sm 2s infinite;
+        display: inline-block;
+      }
+      @keyframes pulse-sm {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      .learning-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .learn-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        border-radius: 20px;
+        background: var(--green-muted);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--green);
+      }
 
-    @media (max-width: 768px) {
-      .about__grid { grid-template-columns: 1fr; }
-    }
+      @media (max-width: 768px) {
+        .about__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        SKILLS
     ════════════════════════════════════════════ */
-    .skills__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+      .skills__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
 
-    .skill-group {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: var(--card-padding);
-      transition: border-color var(--t-fast), transform var(--t-fast);
-    }
-    .skill-group:hover { border-color: var(--blue); transform: translateY(-3px); }
+      .skill-group {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: var(--card-padding);
+        transition:
+          border-color var(--t-fast),
+          transform var(--t-fast);
+      }
+      .skill-group:hover {
+        border-color: var(--blue);
+        transform: translateY(-3px);
+      }
 
-    .skill-group__header {
-      display: flex; align-items: center; gap: 10px;
-      margin-bottom: 18px;
-    }
-    .skill-group__icon {
-      width: 36px; height: 36px; border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.9rem; flex-shrink: 0;
-    }
-    .skill-group__title {
-      font-family: var(--font-display);
-      font-size: 0.875rem; font-weight: 700;
-      color: var(--text-primary); text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+      .skill-group__header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+      .skill-group__icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .skill-group__title {
+        font-family: var(--font-display);
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
 
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-    .skill-tag {
-      display: inline-block;
-      padding: 4px 11px; border-radius: 20px;
-      font-size: 0.78rem; font-weight: 500;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-      transition: all var(--t-fast);
-    }
-    .skill-tag:hover { color: var(--text-primary); border-color: var(--border-strong); }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .skill-tag {
+        display: inline-block;
+        padding: 4px 11px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        color: var(--text-secondary);
+        transition: all var(--t-fast);
+      }
+      .skill-tag:hover {
+        color: var(--text-primary);
+        border-color: var(--border-strong);
+      }
 
-    @media (max-width: 900px) { .skills__grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 580px) { .skills__grid { grid-template-columns: 1fr; } }
+      @media (max-width: 900px) {
+        .skills__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 580px) {
+        .skills__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        EXPERIENCE — DUAL TRACK TIMELINE
        (The signature layout: Academic | Technical)
     ════════════════════════════════════════════ */
-    .timeline {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 48px;
-      position: relative;
-    }
+      .timeline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 48px;
+        position: relative;
+      }
 
-    /* Centre divider line */
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%; transform: translateX(-50%);
-      width: 1px;
-      background: var(--border);
-    }
+      /* Centre divider line */
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        background: var(--border);
+      }
 
-    .timeline__col-header {
-      text-align: center; margin-bottom: 32px;
-      position: sticky; top: 60px; z-index: 5;
-      padding: 10px 0;
-    }
+      .timeline__col-header {
+        text-align: center;
+        margin-bottom: 32px;
+        position: sticky;
+        top: 60px;
+        z-index: 5;
+        padding: 10px 0;
+      }
 
-    .timeline__col-label {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 6px 16px; border-radius: 20px;
-      font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-    }
-    .timeline__col-label--academic {
-      background: var(--blue-muted);
-      border: 1px solid rgba(37,99,235,0.2);
-      color: var(--blue);
-    }
-    .timeline__col-label--technical {
-      background: var(--green-muted);
-      border: 1px solid rgba(16,185,129,0.2);
-      color: var(--green);
-    }
+      .timeline__col-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .timeline__col-label--academic {
+        background: var(--blue-muted);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        color: var(--blue);
+      }
+      .timeline__col-label--technical {
+        background: var(--green-muted);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        color: var(--green);
+      }
 
-    .exp-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: 22px 24px;
-      margin-bottom: 20px;
-      position: relative;
-      transition: border-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
-    }
-    .exp-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
-      border-color: var(--border-strong);
-    }
-    [data-theme="dark"] .exp-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+      .exp-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: 22px 24px;
+        margin-bottom: 20px;
+        position: relative;
+        transition:
+          border-color var(--t-fast),
+          transform var(--t-fast),
+          box-shadow var(--t-fast);
+      }
+      .exp-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+        border-color: var(--border-strong);
+      }
+      [data-theme="dark"] .exp-card:hover {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      }
 
-    /* Left stripe per track */
-    .exp-card::before {
-      content: ''; position: absolute;
-      left: 0; top: 16px; bottom: 16px;
-      width: 3px; border-radius: 0 3px 3px 0;
-    }
-    .exp-card--academic::before  { background: var(--blue); }
-    .exp-card--technical::before { background: var(--green); }
+      /* Left stripe per track */
+      .exp-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 16px;
+        bottom: 16px;
+        width: 3px;
+        border-radius: 0 3px 3px 0;
+      }
+      .exp-card--academic::before {
+        background: var(--blue);
+      }
+      .exp-card--technical::before {
+        background: var(--green);
+      }
 
-    .exp-card__badge {
-      display: inline-block;
-      padding: 3px 10px; border-radius: 6px;
-      font-size: 0.68rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .badge--academic  { background: var(--blue-muted); color: var(--blue); }
-    .badge--technical { background: var(--green-muted); color: var(--green); }
-    .badge--volunteer { background: rgba(245,158,11,0.1); color: var(--orange); }
-    .badge--airport   { background: rgba(107,114,128,0.1); color: #6B7280; }
-    .badge--freelance { background: rgba(239,68,68,0.08); color: #EF4444; }
-    .badge--intern    { background: rgba(99,102,241,0.1); color: #6366F1; }
+      .exp-card__badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .badge--academic {
+        background: var(--blue-muted);
+        color: var(--blue);
+      }
+      .badge--technical {
+        background: var(--green-muted);
+        color: var(--green);
+      }
+      .badge--volunteer {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--orange);
+      }
+      .badge--airport {
+        background: rgba(107, 114, 128, 0.1);
+        color: #6b7280;
+      }
+      .badge--freelance {
+        background: rgba(239, 68, 68, 0.08);
+        color: #ef4444;
+      }
+      .badge--intern {
+        background: rgba(99, 102, 241, 0.1);
+        color: #6366f1;
+      }
 
-    .exp-card__title {
-      font-family: var(--font-display);
-      font-size: 1rem; font-weight: 700;
-      color: var(--text-primary); margin-bottom: 3px;
-    }
-    .exp-card__org {
-      font-size: 0.825rem; font-weight: 500;
-      color: var(--text-secondary); margin-bottom: 6px;
-    }
-    .exp-card__date {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--blue); margin-bottom: 14px;
-    }
-    .exp-card__list {
-      list-style: none; padding: 0; margin: 0;
-    }
-    .exp-card__list li {
-      font-size: 0.845rem; color: var(--text-secondary);
-      padding: 5px 0 5px 16px;
-      position: relative; line-height: 1.55;
-      border-bottom: 1px solid var(--border);
-    }
-    .exp-card__list li:last-child { border-bottom: none; padding-bottom: 0; }
-    .exp-card__list li::before {
-      content: ''; position: absolute; left: 0; top: 12px;
-      width: 5px; height: 5px; border-radius: 50%;
-      background: var(--border-strong);
-    }
-    .exp-card--academic .exp-card__list li::before  { background: var(--blue); opacity: 0.5; }
-    .exp-card--technical .exp-card__list li::before { background: var(--green); opacity: 0.5; }
-    .exp-card__note {
-      font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6;
-    }
+      .exp-card__title {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 3px;
+      }
+      .exp-card__org {
+        font-size: 0.825rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        margin-bottom: 6px;
+      }
+      .exp-card__date {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--blue);
+        margin-bottom: 14px;
+      }
+      .exp-card__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .exp-card__list li {
+        font-size: 0.845rem;
+        color: var(--text-secondary);
+        padding: 5px 0 5px 16px;
+        position: relative;
+        line-height: 1.55;
+        border-bottom: 1px solid var(--border);
+      }
+      .exp-card__list li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .exp-card__list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--border-strong);
+      }
+      .exp-card--academic .exp-card__list li::before {
+        background: var(--blue);
+        opacity: 0.5;
+      }
+      .exp-card--technical .exp-card__list li::before {
+        background: var(--green);
+        opacity: 0.5;
+      }
+      .exp-card__note {
+        font-size: 0.84rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
 
-    @media (max-width: 820px) {
-      .timeline { grid-template-columns: 1fr; }
-      .timeline::before { display: none; }
-      .timeline__col-header { position: static; }
-    }
+      @media (max-width: 820px) {
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+        .timeline::before {
+          display: none;
+        }
+        .timeline__col-header {
+          position: static;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        EDUCATION
     ════════════════════════════════════════════ */
-    .edu__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+      .edu__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
 
-    .edu-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: var(--card-padding);
-      height: 100%;
-      transition: transform var(--t-fast), box-shadow var(--t-fast);
-    }
-    .edu-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
-    }
+      .edu-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: var(--card-padding);
+        height: 100%;
+        transition:
+          transform var(--t-fast),
+          box-shadow var(--t-fast);
+      }
+      .edu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+      }
 
-    .edu-card__award {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: 0.72rem; font-weight: 700;
-      color: var(--blue); margin-bottom: 12px;
-      text-transform: uppercase; letter-spacing: 0.06em;
-    }
-    .edu-card__degree {
-      font-family: var(--font-display);
-      font-size: 1rem; font-weight: 700;
-      color: var(--text-primary); margin-bottom: 4px;
-      line-height: 1.3;
-    }
-    .edu-card__school { font-size: 0.845rem; color: var(--text-secondary); margin-bottom: 6px; }
-    .edu-card__period {
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--text-tertiary); margin-bottom: 14px;
-      display: flex; align-items: center; gap: 5px;
-    }
-    .edu-card__details { font-size: 0.845rem; color: var(--text-secondary); line-height: 1.6; }
-    .edu-card__details strong { color: var(--text-primary); }
+      .edu-card__award {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--blue);
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .edu-card__degree {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+      .edu-card__school {
+        font-size: 0.845rem;
+        color: var(--text-secondary);
+        margin-bottom: 6px;
+      }
+      .edu-card__period {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-tertiary);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .edu-card__details {
+        font-size: 0.845rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+      .edu-card__details strong {
+        color: var(--text-primary);
+      }
 
-    /* Score bars for the IPMC cert scores */
-    .score-bar { margin: 6px 0; }
-    .score-bar__label {
-      display: flex; justify-content: space-between;
-      font-size: 0.72rem; color: var(--text-secondary);
-      margin-bottom: 3px;
-    }
-    .score-bar__track {
-      height: 4px; background: var(--border);
-      border-radius: 4px; overflow: hidden;
-    }
-    .score-bar__fill {
-      height: 100%; border-radius: 4px;
-      background: linear-gradient(90deg, var(--blue), var(--green));
-      transition: width 1s ease 0.3s;
-    }
+      /* Score bars for the IPMC cert scores */
+      .score-bar {
+        margin: 6px 0;
+      }
+      .score-bar__label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.72rem;
+        color: var(--text-secondary);
+        margin-bottom: 3px;
+      }
+      .score-bar__track {
+        height: 4px;
+        background: var(--border);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .score-bar__fill {
+        height: 100%;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--blue), var(--green));
+        transition: width 1s ease 0.3s;
+      }
 
-    @media (max-width: 900px) { .edu__grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 580px) { .edu__grid { grid-template-columns: 1fr; } }
+      @media (max-width: 900px) {
+        .edu__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 580px) {
+        .edu__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        PROJECTS
     ════════════════════════════════════════════ */
-    .projects__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+      .projects__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
 
-    .proj-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: var(--card-padding);
-      display: flex; flex-direction: column;
-      height: 100%;
-      transition: transform var(--t-fast), border-color var(--t-fast), box-shadow var(--t-fast);
-    }
-    .proj-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--blue);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
-    }
+      .proj-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: var(--card-padding);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition:
+          transform var(--t-fast),
+          border-color var(--t-fast),
+          box-shadow var(--t-fast);
+      }
+      .proj-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--blue);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+      }
 
-    .proj-card__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-    .proj-tag {
-      display: inline-block;
-      padding: 3px 9px; border-radius: 5px;
-      font-size: 0.7rem; font-weight: 600;
-      background: var(--blue-muted);
-      color: var(--blue);
-      border: 1px solid rgba(37,99,235,0.15);
-    }
+      .proj-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 16px;
+      }
+      .proj-tag {
+        display: inline-block;
+        padding: 3px 9px;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        background: var(--blue-muted);
+        color: var(--blue);
+        border: 1px solid rgba(37, 99, 235, 0.15);
+      }
 
-    .proj-card__title {
-      font-family: var(--font-display);
-      font-size: 1.05rem; font-weight: 700;
-      color: var(--text-primary); margin-bottom: 10px;
-    }
-    .proj-card__desc {
-      font-size: 0.855rem; color: var(--text-secondary);
-      line-height: 1.65; flex: 1; margin-bottom: 18px;
-    }
+      .proj-card__title {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+      }
+      .proj-card__desc {
+        font-size: 0.855rem;
+        color: var(--text-secondary);
+        line-height: 1.65;
+        flex: 1;
+        margin-bottom: 18px;
+      }
 
-    .proj-card__chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-    .proj-chip {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 3px 9px; border-radius: 20px;
-      font-size: 0.7rem; font-weight: 600;
-      background: var(--green-muted);
-      color: var(--green);
-      border: 1px solid rgba(16,185,129,0.15);
-    }
+      .proj-card__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 18px;
+      }
+      .proj-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 9px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        background: var(--green-muted);
+        color: var(--green);
+        border: 1px solid rgba(16, 185, 129, 0.15);
+      }
 
-    .proj-card__link {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 0.845rem; font-weight: 600;
-      color: var(--blue); text-decoration: none;
-      margin-top: auto;
-      transition: gap var(--t-fast);
-    }
-    .proj-card__link:hover { gap: 9px; }
+      .proj-card__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.845rem;
+        font-weight: 600;
+        color: var(--blue);
+        text-decoration: none;
+        margin-top: auto;
+        transition: gap var(--t-fast);
+      }
+      .proj-card__link:hover {
+        gap: 9px;
+      }
 
-    @media (max-width: 900px) { .projects__grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 580px) { .projects__grid { grid-template-columns: 1fr; } }
+      @media (max-width: 900px) {
+        .projects__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 580px) {
+        .projects__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        CERTIFICATIONS
     ════════════════════════════════════════════ */
-    .certs__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
+      .certs__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
 
-    .cert-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px; padding: 20px;
-      display: flex; align-items: center; gap: 16px;
-      transition: border-color var(--t-fast), transform var(--t-fast);
-    }
-    .cert-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+      .cert-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition:
+          border-color var(--t-fast),
+          transform var(--t-fast);
+      }
+      .cert-card:hover {
+        border-color: var(--blue);
+        transform: translateY(-2px);
+      }
 
-    .cert-card__icon {
-      width: 44px; height: 44px; border-radius: 10px;
-      background: var(--blue-muted);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; color: var(--blue); flex-shrink: 0;
-    }
-    .cert-card__name {
-      font-weight: 600; font-size: 0.9rem;
-      color: var(--text-primary); margin-bottom: 2px;
-    }
-    .cert-card__issuer {
-      font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 6px;
-    }
-    .cert-card__link {
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--blue); text-decoration: none;
-      display: inline-flex; align-items: center; gap: 4px;
-    }
-    .cert-card__link:hover { text-decoration: underline; }
+      .cert-card__icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--blue-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--blue);
+        flex-shrink: 0;
+      }
+      .cert-card__name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        margin-bottom: 2px;
+      }
+      .cert-card__issuer {
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        margin-bottom: 6px;
+      }
+      .cert-card__link {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--blue);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .cert-card__link:hover {
+        text-decoration: underline;
+      }
 
-    @media (max-width: 580px) { .certs__grid { grid-template-columns: 1fr; } }
+      @media (max-width: 580px) {
+        .certs__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        FREELANCE / HIRE ME
     ════════════════════════════════════════════ */
-    #freelance {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
+      #freelance {
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
 
-    .freelance__inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px; align-items: start;
-    }
+      .freelance__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: start;
+      }
 
-    .service-item {
-      display: flex; gap: 14px; align-items: flex-start;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .service-item:last-of-type { border-bottom: none; }
-    .service-item__icon {
-      width: 38px; height: 38px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.9rem; flex-shrink: 0;
-    }
-    .service-item__title {
-      font-size: 0.9rem; font-weight: 600;
-      color: var(--text-primary); margin-bottom: 2px;
-    }
-    .service-item__desc {
-      font-size: 0.82rem; color: var(--text-secondary);
-    }
+      .service-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .service-item:last-of-type {
+        border-bottom: none;
+      }
+      .service-item__icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .service-item__title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 2px;
+      }
+      .service-item__desc {
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+      }
 
-    .form-embed {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    }
-    [data-theme="dark"] .form-embed { box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
-    .form-embed__note {
-      text-align: center; margin-top: 10px;
-      font-size: 0.75rem; color: var(--text-tertiary);
-    }
+      .form-embed {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      }
+      [data-theme="dark"] .form-embed {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+      }
+      .form-embed__note {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.75rem;
+        color: var(--text-tertiary);
+      }
 
-    @media (max-width: 820px) {
-      .freelance__inner { grid-template-columns: 1fr; }
-    }
+      @media (max-width: 820px) {
+        .freelance__inner {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        TESTIMONIAL
     ════════════════════════════════════════════ */
-    .testimonial {
-      border-left: 3px solid var(--blue);
-      border-radius: 0 12px 12px 0;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 28px 32px;
-      max-width: 720px;
-    }
-    .testimonial blockquote {
-      font-family: var(--font-display);
-      font-size: 1.05rem; font-weight: 600;
-      font-style: italic;
-      color: var(--text-primary);
-      line-height: 1.7; margin-bottom: 20px;
-    }
-    .testimonial__source { display: flex; align-items: center; gap: 12px; }
-    .testimonial__avatar {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: var(--blue-muted);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--blue); font-size: 1rem; flex-shrink: 0;
-    }
-    .testimonial__name {
-      font-weight: 600; font-size: 0.875rem;
-      color: var(--text-primary);
-    }
-    .testimonial__role {
-      font-size: 0.78rem; color: var(--text-secondary);
-    }
+      .testimonial {
+        border-left: 3px solid var(--blue);
+        border-radius: 0 12px 12px 0;
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 28px 32px;
+        max-width: 720px;
+      }
+      .testimonial blockquote {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 600;
+        font-style: italic;
+        color: var(--text-primary);
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .testimonial__source {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testimonial__avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--blue-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--blue);
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .testimonial__name {
+        font-weight: 600;
+        font-size: 0.875rem;
+        color: var(--text-primary);
+      }
+      .testimonial__role {
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        CONTACT
     ════════════════════════════════════════════ */
-    .contact__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 32px;
-    }
+      .contact__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 32px;
+      }
 
-    .contact-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--card-radius);
-      padding: 24px 20px;
-      text-align: center;
-      transition: border-color var(--t-fast), transform var(--t-fast);
-    }
-    .contact-card:hover { border-color: var(--blue); transform: translateY(-3px); }
-    .contact-card__icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: var(--blue-muted);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; color: var(--blue);
-      margin: 0 auto 14px;
-    }
-    .contact-card__label {
-      font-size: 0.75rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.08em;
-      color: var(--text-tertiary); margin-bottom: 6px;
-    }
-    .contact-card a {
-      font-size: 0.875rem; font-weight: 500;
-      color: var(--blue); text-decoration: none; display: block;
-    }
-    .contact-card a:hover { text-decoration: underline; }
-    .contact-card p {
-      font-size: 0.875rem; color: var(--text-secondary); margin: 0;
-    }
+      .contact-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: 24px 20px;
+        text-align: center;
+        transition:
+          border-color var(--t-fast),
+          transform var(--t-fast);
+      }
+      .contact-card:hover {
+        border-color: var(--blue);
+        transform: translateY(-3px);
+      }
+      .contact-card__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: var(--blue-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--blue);
+        margin: 0 auto 14px;
+      }
+      .contact-card__label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-tertiary);
+        margin-bottom: 6px;
+      }
+      .contact-card a {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--blue);
+        text-decoration: none;
+        display: block;
+      }
+      .contact-card a:hover {
+        text-decoration: underline;
+      }
+      .contact-card p {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        margin: 0;
+      }
 
-    .contact__social {
-      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
-    }
-    .social-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 20px; border-radius: 10px;
-      font-size: 0.875rem; font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-primary);
-      transition: all var(--t-fast);
-    }
-    .social-btn:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+      .contact__social {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .social-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text-primary);
+        transition: all var(--t-fast);
+      }
+      .social-btn:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+        transform: translateY(-2px);
+      }
 
-    @media (max-width: 700px) { .contact__grid { grid-template-columns: 1fr; } }
+      @media (max-width: 700px) {
+        .contact__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        FOOTER
     ════════════════════════════════════════════ */
-    footer {
-      border-top: 1px solid var(--border);
-      background: var(--surface);
-      padding: 40px 0;
-      text-align: center;
-    }
-    footer p { font-size: 0.84rem; color: var(--text-tertiary); margin-bottom: 4px; }
-    footer p:last-child { margin-bottom: 0; }
+      footer {
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+        padding: 40px 0;
+        text-align: center;
+      }
+      footer p {
+        font-size: 0.84rem;
+        color: var(--text-tertiary);
+        margin-bottom: 4px;
+      }
+      footer p:last-child {
+        margin-bottom: 0;
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        GITHUB STATS
     ════════════════════════════════════════════ */
-    .github-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .github-stats img {
-      width: 100%; border-radius: 10px;
-      border: 1px solid var(--border);
-      transition: transform var(--t-fast);
-    }
-    .github-stats img:hover { transform: translateY(-3px); }
-    @media (max-width: 580px) { .github-stats { grid-template-columns: 1fr; } }
+      .github-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .github-stats img {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        transition: transform var(--t-fast);
+      }
+      .github-stats img:hover {
+        transform: translateY(-3px);
+      }
+      @media (max-width: 580px) {
+        .github-stats {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ════════════════════════════════════════════
+      /* ════════════════════════════════════════════
        RECOGNITIONS BANNER
     ════════════════════════════════════════════ */
-    .recognition-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: var(--section-gap);
-    }
-    .recog-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px; padding: 20px;
-      display: flex; gap: 12px; align-items: flex-start;
-    }
-    .recog-card__icon {
-      width: 36px; height: 36px; border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem; flex-shrink: 0;
-    }
-    .recog-card__title { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin-bottom: 3px; }
-    .recog-card__desc  { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
-    @media (max-width: 700px) { .recognition-strip { grid-template-columns: 1fr; } }
+      .recognition-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: var(--section-gap);
+      }
+      .recog-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .recog-card__icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+      .recog-card__title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 3px;
+      }
+      .recog-card__desc {
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+      @media (max-width: 700px) {
+        .recognition-strip {
+          grid-template-columns: 1fr;
+        }
+      }
 
-  </style>
-</head>
+      .about-set {
+        padding-top: 50px;
+        padding-bottom: 40px;
+      }
+      .hero {
+        padding-bottom: 30px;
+      }
+      .skills-set {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .experience-set {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .education-set,
+      .projects-set,
+      .freelance-set,
+      .contact-set {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
 
-<body>
-<div id="progress"></div>
+  <body>
+    <div id="progress"></div>
 
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      NAVIGATION
 ══════════════════════════════════════════════ -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav__inner">
-    <a href="#" class="nav__logo" aria-label="Eric Dickson home">EED.</a>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo" aria-label="Eric Dickson home">EED.</a>
 
-    <ul class="nav__links" id="navLinks" role="list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#freelance">Hire Me</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#freelance">Hire Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <div class="nav__actions">
-      <button class="btn-theme" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
-        <i class="fas fa-moon" id="themeIcon"></i>
-      </button>
-      <a href="resume.pdf" download class="nav__hire">
-        <!-- UPDATE: change resume.pdf to your actual CV filename -->
-        <i class="fas fa-download"></i>
-        <span>Download CV</span>
-      </a>
-      <button class="nav__hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </div>
-</nav>
+        <div class="nav__actions">
+          <button
+            class="btn-theme"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+          <a href="resume.pdf" download class="nav__hire">
+            <!-- UPDATE: change resume.pdf to your actual CV filename -->
+            <i class="fas fa-download"></i>
+            <span>Download CV</span>
+          </a>
+          <button
+            class="nav__hamburger"
+            id="menuBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════ -->
-<header class="hero" aria-labelledby="hero-heading">
-  <div class="container">
-    <div class="hero__inner">
-      <!-- Text -->
-      <div class="hero__text">
-        <div class="hero__eyebrow">
-          <i class="fas fa-map-marker-alt"></i>
-          <!-- UPDATE: change location if needed -->
-          University of Liberia · Fendall Campus, Liberia
-        </div>
-
-        <!-- UPDATE: name -->
-        <h1 class="hero__name" id="hero-heading">Eric Edwin<br>Dickson</h1>
-
-        <!-- UPDATE: subtitle -->
-        <p class="hero__title">MCA · Web Technology Specialist · AI Engineer</p>
-
-        <!-- UPDATE: bio sentence -->
-        <p class="hero__bio">
-          Software engineer, educator, and IT leader with 8+ years managing enterprise-scale
-          systems at the University of Liberia — now building full-stack and AI-powered solutions
-          for clients across three continents.
-        </p>
-
-        <!-- UPDATE: edit or add stat pills as achievements change -->
-        <div class="hero__stats">
-          <div class="stat-pill">
-            <div class="stat-pill__icon stat-pill__icon--blue">
-              <i class="fas fa-graduation-cap"></i>
+    <header class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero__inner">
+          <!-- Text -->
+          <div class="hero__text">
+            <div class="hero__eyebrow">
+              <i class="fas fa-map-marker-alt"></i>
+              <!-- UPDATE: change location if needed -->
+              University of Liberia · Fendall Campus, Liberia
             </div>
-            <div>
-              <span style="font-size:0.7rem; color:var(--text-tertiary); display:block; line-height:1">Degree</span>
-              MCA — 8.45 CGPA
+
+            <!-- UPDATE: name -->
+            <h1 class="hero__name" id="hero-heading">
+              Eric Edwin<br />Dickson
+            </h1>
+
+            <!-- UPDATE: subtitle -->
+            <p class="hero__title">
+              MCA · Web Technology Specialist · AI Engineer
+            </p>
+
+            <!-- UPDATE: bio sentence -->
+            <p class="hero__bio">
+              Software engineer, educator, and IT leader with 8+ years managing
+              enterprise-scale systems at the University of Liberia — now
+              building full-stack and AI-powered solutions for clients across
+              three continents.
+            </p>
+
+            <!-- UPDATE: edit or add stat pills as achievements change -->
+            <div class="hero__stats">
+              <div class="stat-pill">
+                <div class="stat-pill__icon stat-pill__icon--blue">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <span
+                    style="
+                      font-size: 0.7rem;
+                      color: var(--text-tertiary);
+                      display: block;
+                      line-height: 1;
+                    "
+                    >Degree</span
+                  >
+                  MCA — 8.45 CGPA
+                </div>
+              </div>
+              <div class="stat-pill">
+                <div class="stat-pill__icon stat-pill__icon--orange">
+                  <i class="fab fa-harvard"></i>
+                </div>
+                <div>
+                  <span
+                    style="
+                      font-size: 0.7rem;
+                      color: var(--text-tertiary);
+                      display: block;
+                      line-height: 1;
+                    "
+                    >Harvard</span
+                  >
+                  CS50x Certified
+                </div>
+              </div>
+              <div class="stat-pill">
+                <div class="stat-pill__icon stat-pill__icon--green">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div>
+                  <span
+                    style="
+                      font-size: 0.7rem;
+                      color: var(--text-tertiary);
+                      display: block;
+                      line-height: 1;
+                    "
+                    >Students taught</span
+                  >
+                  1,000+ since 2019
+                </div>
+              </div>
+              <div class="stat-pill">
+                <div class="stat-pill__icon stat-pill__icon--navy">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div>
+                  <span
+                    style="
+                      font-size: 0.7rem;
+                      color: var(--text-tertiary);
+                      display: block;
+                      line-height: 1;
+                    "
+                    >Records managed</span
+                  >
+                  20,000+ students
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__cta">
+              <a href="#projects" class="btn-primary">
+                <i class="fas fa-code"></i> View Projects
+              </a>
+              <a href="#freelance" class="btn-secondary">
+                <i class="fas fa-briefcase"></i> Hire Me
+              </a>
+              <a
+                href="https://github.com/EEDICKSON"
+                target="_blank"
+                rel="noopener"
+                class="btn-secondary"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <!-- UPDATE: replace with your actual LinkedIn URL -->
+              <a
+                href="https://linkedin.com/in/eric-edwin-dickson"
+                target="_blank"
+                rel="noopener"
+                class="btn-secondary"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
             </div>
           </div>
-          <div class="stat-pill">
-            <div class="stat-pill__icon stat-pill__icon--orange">
-              <i class="fab fa-harvard"></i>
-            </div>
-            <div>
-              <span style="font-size:0.7rem; color:var(--text-tertiary); display:block; line-height:1">Harvard</span>
-              CS50x Certified
-            </div>
-          </div>
-          <div class="stat-pill">
-            <div class="stat-pill__icon stat-pill__icon--green">
-              <i class="fas fa-users"></i>
-            </div>
-            <div>
-              <span style="font-size:0.7rem; color:var(--text-tertiary); display:block; line-height:1">Students taught</span>
-              1,000+ since 2019
-            </div>
-          </div>
-          <div class="stat-pill">
-            <div class="stat-pill__icon stat-pill__icon--navy">
-              <i class="fas fa-database"></i>
-            </div>
-            <div>
-              <span style="font-size:0.7rem; color:var(--text-tertiary); display:block; line-height:1">Records managed</span>
-              20,000+ students
-            </div>
-          </div>
-        </div>
 
-        <div class="hero__cta">
-          <a href="#projects" class="btn-primary">
-            <i class="fas fa-code"></i> View Projects
-          </a>
-          <a href="#freelance" class="btn-secondary">
-            <i class="fas fa-briefcase"></i> Hire Me
-          </a>
-          <a href="https://github.com/EEDICKSON" target="_blank" rel="noopener" class="btn-secondary">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <!-- UPDATE: replace with your actual LinkedIn URL -->
-          <a href="https://linkedin.com/in/eric-edwin-dickson" target="_blank" rel="noopener" class="btn-secondary">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
+          <!-- Image -->
+          <div class="hero__image-col">
+            <div class="hero__img-wrap">
+              <!-- UPDATE: replace image/eedimage.jpeg with your photo path -->
+              <img
+                src="image/eedimage.jpeg"
+                alt="Eric Edwin Dickson — IT Professional and Web Developer at the University of Liberia"
+                class="hero__img"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                width="280"
+                height="280"
+              />
+              <div class="hero__badge">
+                <div class="hero__badge-dot"></div>
+                <div>
+                  <div class="hero__badge-text">Available for projects</div>
+                  <div class="hero__badge-sub">Response within 48 hrs</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </header>
 
-      <!-- Image -->
-      <div class="hero__image-col">
-        <div class="hero__img-wrap">
-          <!-- UPDATE: replace image/eedimage.jpeg with your photo path -->
-          <img src="image/eedimage.jpeg" alt="Eric Edwin Dickson — IT Professional and Web Developer at the University of Liberia" class="hero__img" loading="eager" fetchpriority="high" decoding="async" width="280" height="280" />
-          <div class="hero__badge">
-            <div class="hero__badge-dot"></div>
-            <div>
-              <div class="hero__badge-text">Available for projects</div>
-              <div class="hero__badge-sub">Response within 48 hrs</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      ABOUT
 ══════════════════════════════════════════════ -->
-<section id="about" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="reveal">
-      <span class="sec-label">Background</span>
-      <h2 class="sec-title" id="about-heading">Professional Summary</h2>
-      <div class="sec-divider"></div>
-    </div>
+    <section class="about-set" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="reveal">
+          <span class="sec-label">Background</span>
+          <h2 class="sec-title" id="about-heading">Professional Summary</h2>
+          <div class="sec-divider"></div>
+        </div>
 
-    <div class="about__grid reveal">
-      <div class="about__text">
-        <!-- UPDATE: edit summary paragraphs as career evolves -->
-        <p>
-          IT professional and educator with over eight years of progressive experience managing
-          university-scale information systems, academic records, and technology infrastructure
-          at the University of Liberia — one of West Africa's largest public universities.
-        </p>
-        <p>
-          Awarded a fully-funded institutional scholarship to pursue a Master of Computer Applications
-          (MCA) at RK University, India, graduating with a CGPA of 8.45 and a Semester IV SGPA of 9.00.
-          Complemented by elite external certifications across Full-Stack Web Development, Artificial
-          Intelligence, and Systems Architecture.
-        </p>
-        <p>
-          Having taught foundational Computer Science to over 1,000 undergraduates since 2019, I return
-          to the University of Liberia committed to transforming its technology faculty and expanding
-          computational literacy across the institution.
-        </p>
+        <div class="about__grid reveal">
+          <div class="about__text">
+            <!-- UPDATE: edit summary paragraphs as career evolves -->
+            <p>
+              IT professional and educator with over eight years of progressive
+              experience managing university-scale information systems, academic
+              records, and technology infrastructure at the University of
+              Liberia — one of West Africa's largest public universities.
+            </p>
+            <p>
+              Awarded a fully-funded institutional scholarship to pursue a
+              Master of Computer Applications (MCA) at RK University, India,
+              graduating with a CGPA of 8.45 and a Semester IV SGPA of 9.00.
+              Complemented by elite external certifications across Full-Stack
+              Web Development, Artificial Intelligence, and Systems
+              Architecture.
+            </p>
+            <p>
+              Having taught foundational Computer Science to over 1,000
+              undergraduates since 2019, I return to the University of Liberia
+              committed to transforming its technology faculty and expanding
+              computational literacy across the institution.
+            </p>
 
-        <!-- UPDATE: update mission text when goals shift -->
-        <div class="about__mission">
-          <i class="fas fa-flag"></i>
-          <p>
-            <strong>Mission on return to Liberia:</strong> Advance the University of Liberia's
-            technology faculty through modern curriculum design, AI integration into academic
-            workflows, and building a foundation for computational research — turning a world-class
-            MCA into tangible impact for the next generation of Liberian engineers.
-          </p>
+            <!-- UPDATE: update mission text when goals shift -->
+            <div class="about__mission">
+              <i class="fas fa-flag"></i>
+              <p>
+                <strong>Mission on return to Liberia:</strong> Advance the
+                University of Liberia's technology faculty through modern
+                curriculum design, AI integration into academic workflows, and
+                building a foundation for computational research — turning a
+                world-class MCA into tangible impact for the next generation of
+                Liberian engineers.
+              </p>
+            </div>
+          </div>
+
+          <div class="about__right">
+            <div class="facts-card">
+              <h3>Quick Facts</h3>
+              <!-- UPDATE: update each fact-row value as details change -->
+              <div class="fact-row">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                  <span class="fact-label">Current status</span>
+                  <span class="fact-value"
+                    >MCA Graduate · UL Study Leave Scholar</span
+                  >
+                </div>
+              </div>
+              <div class="fact-row">
+                <i class="fas fa-university"></i>
+                <div>
+                  <span class="fact-label">Institution</span>
+                  <span class="fact-value">University of Liberia</span>
+                </div>
+              </div>
+              <div class="fact-row">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                  <span class="fact-label">MCA CGPA</span>
+                  <span class="fact-value"
+                    >8.45 / 10 (First Class with Distinction)</span
+                  >
+                </div>
+              </div>
+              <div class="fact-row">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <span class="fact-label">Years experience</span>
+                  <span class="fact-value">8+ years (IT & academia)</span>
+                </div>
+              </div>
+              <div class="fact-row">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <span class="fact-label">Contact</span>
+                  <span class="fact-value">+231 770 309 889</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- UPDATE: update "Currently exploring" list as you learn new things -->
+            <div class="learning-card">
+              <h3><span class="live-dot"></span> Currently exploring</h3>
+              <div class="learning-tags">
+                <span class="learn-tag"
+                  ><i class="fas fa-circle-dot" style="font-size: 0.55rem"></i
+                  >Next.js / App Router</span
+                >
+                <span class="learn-tag"
+                  ><i class="fas fa-circle-dot" style="font-size: 0.55rem"></i
+                  >LangChain & RAG</span
+                >
+                <span class="learn-tag"
+                  ><i class="fas fa-circle-dot" style="font-size: 0.55rem"></i
+                  >Docker & CI/CD</span
+                >
+                <span class="learn-tag"
+                  ><i class="fas fa-circle-dot" style="font-size: 0.55rem"></i
+                  >TypeScript</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="about__right">
-        <div class="facts-card">
-          <h3>Quick Facts</h3>
-          <!-- UPDATE: update each fact-row value as details change -->
-          <div class="fact-row">
-            <i class="fas fa-briefcase"></i>
-            <div>
-              <span class="fact-label">Current status</span>
-              <span class="fact-value">MCA Graduate · UL Study Leave Scholar</span>
-            </div>
-          </div>
-          <div class="fact-row">
-            <i class="fas fa-university"></i>
-            <div>
-              <span class="fact-label">Institution</span>
-              <span class="fact-value">University of Liberia</span>
-            </div>
-          </div>
-          <div class="fact-row">
-            <i class="fas fa-chart-line"></i>
-            <div>
-              <span class="fact-label">MCA CGPA</span>
-              <span class="fact-value">8.45 / 10 (First Class with Distinction)</span>
-            </div>
-          </div>
-          <div class="fact-row">
-            <i class="fas fa-clock"></i>
-            <div>
-              <span class="fact-label">Years experience</span>
-              <span class="fact-value">8+ years (IT & academia)</span>
-            </div>
-          </div>
-          <div class="fact-row">
-            <i class="fas fa-phone"></i>
-            <div>
-              <span class="fact-label">Contact</span>
-              <span class="fact-value">+231 770 309 889</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- UPDATE: update "Currently exploring" list as you learn new things -->
-        <div class="learning-card">
-          <h3><span class="live-dot"></span> Currently exploring</h3>
-          <div class="learning-tags">
-            <span class="learn-tag"><i class="fas fa-circle-dot" style="font-size:0.55rem"></i>Next.js / App Router</span>
-            <span class="learn-tag"><i class="fas fa-circle-dot" style="font-size:0.55rem"></i>LangChain & RAG</span>
-            <span class="learn-tag"><i class="fas fa-circle-dot" style="font-size:0.55rem"></i>Docker & CI/CD</span>
-            <span class="learn-tag"><i class="fas fa-circle-dot" style="font-size:0.55rem"></i>TypeScript</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      TESTIMONIAL (Dean's recommendation)
 ══════════════════════════════════════════════ -->
-<section style="padding-top:0">
-  <div class="container">
-    <div class="reveal">
-      <div class="testimonial">
-        <!-- UPDATE: add real quote text when you have it from the Dean -->
-        <blockquote>
-          "Formally recognized and recommended for appointment to the permanent technology faculty —
-          outstanding performance in data processing efficiency and institutional technical operations
-          sets him apart as an exceptional candidate for academic leadership."
-        </blockquote>
-        <div class="testimonial__source">
-          <div class="testimonial__avatar"><i class="fas fa-user-tie"></i></div>
-          <div>
-            <div class="testimonial__name">Dean's Office Recommendation</div>
-            <div class="testimonial__role">David A. Straz Sinje Technical &amp; Vocational College · University of Liberia</div>
+    <section style="padding-top: 0; padding-bottom: 20px">
+      <div class="container">
+        <div class="reveal">
+          <div class="testimonial">
+            <!-- UPDATE: add real quote text when you have it from the Dean -->
+            <blockquote>
+              "Formally recognized and recommended for appointment to the
+              permanent technology faculty — outstanding performance in data
+              processing efficiency and institutional technical operations sets
+              him apart as an exceptional candidate for academic leadership."
+            </blockquote>
+            <div class="testimonial__source">
+              <div class="testimonial__avatar">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div>
+                <div class="testimonial__name">
+                  Dean's Office Recommendation
+                </div>
+                <div class="testimonial__role">
+                  David A. Straz Sinje Technical &amp; Vocational College ·
+                  University of Liberia
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      SKILLS
 ══════════════════════════════════════════════ -->
-<section id="skills" aria-labelledby="skills-heading">
-  <div class="container">
-    <div class="reveal">
-      <span class="sec-label">Expertise</span>
-      <h2 class="sec-title" id="skills-heading">Technical Skills</h2>
-      <div class="sec-divider"></div>
-    </div>
-
-    <!-- UPDATE: add/remove skill tags as your stack grows -->
-    <div class="skills__grid reveal">
-      <div class="skill-group">
-        <div class="skill-group__header">
-          <div class="skill-group__icon" style="background:var(--blue-muted); color:var(--blue)">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="skill-group__title">Programming & Web</div>
+    <section class="skills-set" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="reveal">
+          <span class="sec-label">Expertise</span>
+          <h2 class="sec-title" id="skills-heading">Technical Skills</h2>
+          <div class="sec-divider"></div>
         </div>
-        <div class="skill-tags">
-          <span class="skill-tag">JavaScript (ES6+)</span>
-          <span class="skill-tag">React.js</span>
-          <span class="skill-tag">Node.js / Express</span>
-          <span class="skill-tag">MongoDB / MERN</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">ASP.NET / C#</span>
-          <span class="skill-tag">Java (OOP)</span>
-          <span class="skill-tag">C / C#</span>
-          <span class="skill-tag">HTML5 / CSS3</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">Flutter</span>
+
+        <!-- UPDATE: add/remove skill tags as your stack grows -->
+        <div class="skills__grid reveal">
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <div
+                class="skill-group__icon"
+                style="background: var(--blue-muted); color: var(--blue)"
+              >
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="skill-group__title">Programming & Web</div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Node.js / Express</span>
+              <span class="skill-tag">MongoDB / MERN</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">ASP.NET / C#</span>
+              <span class="skill-tag">Java (OOP)</span>
+              <span class="skill-tag">C / C#</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">Flutter</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <div
+                class="skill-group__icon"
+                style="background: var(--green-muted); color: var(--green)"
+              >
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="skill-group__title">AI & Data Science</div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Generative AI</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">OpenAI API</span>
+              <span class="skill-tag">Large Language Models</span>
+              <span class="skill-tag">IBM Watson</span>
+              <span class="skill-tag">Data Science (Python)</span>
+              <span class="skill-tag">Machine Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <div
+                class="skill-group__icon"
+                style="background: rgba(107, 114, 128, 0.1); color: #6b7280"
+              >
+                <i class="fas fa-server"></i>
+              </div>
+              <div class="skill-group__title">Systems & Infrastructure</div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Windows Server 2008/2012</span>
+              <span class="skill-tag">Active Directory</span>
+              <span class="skill-tag">Linux / Security</span>
+              <span class="skill-tag">LAN / WAN</span>
+              <span class="skill-tag">CCNA</span>
+              <span class="skill-tag">MySQL / SQL Server</span>
+              <span class="skill-tag">Academic Info Systems</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Agile Workflows</span>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="skill-group">
-        <div class="skill-group__header">
-          <div class="skill-group__icon" style="background:var(--green-muted); color:var(--green)">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div class="skill-group__title">AI & Data Science</div>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">Generative AI</span>
-          <span class="skill-tag">Prompt Engineering</span>
-          <span class="skill-tag">OpenAI API</span>
-          <span class="skill-tag">Large Language Models</span>
-          <span class="skill-tag">IBM Watson</span>
-          <span class="skill-tag">Data Science (Python)</span>
-          <span class="skill-tag">Machine Learning</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group__header">
-          <div class="skill-group__icon" style="background:rgba(107,114,128,0.1); color:#6B7280">
-            <i class="fas fa-server"></i>
-          </div>
-          <div class="skill-group__title">Systems & Infrastructure</div>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">Windows Server 2008/2012</span>
-          <span class="skill-tag">Active Directory</span>
-          <span class="skill-tag">Linux / Security</span>
-          <span class="skill-tag">LAN / WAN</span>
-          <span class="skill-tag">CCNA</span>
-          <span class="skill-tag">MySQL / SQL Server</span>
-          <span class="skill-tag">Academic Info Systems</span>
-          <span class="skill-tag">Git / GitHub</span>
-          <span class="skill-tag">Agile Workflows</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      EXPERIENCE — DUAL TRACK TIMELINE
 ══════════════════════════════════════════════ -->
-<section id="experience" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)" aria-labelledby="experience-heading">
-  <div class="container">
-    <div class="reveal">
-      <span class="sec-label">Career</span>
-      <h2 class="sec-title" id="experience-heading">Professional Experience</h2>
-      <div class="sec-divider"></div>
-    </div>
-
-    <div class="timeline">
-      <!-- ── ACADEMIC TRACK ── -->
-      <div>
-        <div class="timeline__col-header">
-          <span class="timeline__col-label timeline__col-label--academic">
-            <i class="fas fa-chalkboard-teacher"></i> Academic Track
-          </span>
+    <section
+      class="experience-set"
+      id="experience"
+      style="
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      "
+      aria-labelledby="experience-heading"
+    >
+      <div class="container">
+        <div class="reveal">
+          <span class="sec-label">Career</span>
+          <h2 class="sec-title" id="experience-heading">
+            Professional Experience
+          </h2>
+          <div class="sec-divider"></div>
         </div>
 
-        <!-- UPDATE: add new teaching roles here as a new .exp-card -->
-        <div class="exp-card exp-card--academic reveal">
-          <span class="exp-card__badge badge--academic">Lecturer</span>
-          <div class="exp-card__title">Part-Time Lecturer</div>
-          <div class="exp-card__org">A. Romeo Horton College of Business & Public Administration, UL</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> 2019 — 2024</div>
-          <ul class="exp-card__list">
-            <li>Delivered <em>Introduction to Computer Science</em> to cohorts of 50+ students — 1,000+ undergraduates reached since 2019.</li>
-            <li>Taught MS Office for Business (Word, Excel, PowerPoint, Access).</li>
-            <li>Independently designed syllabi, lesson plans, and lab exercises from scratch.</li>
-            <li>Earned top student evaluations; recommended by the Dean for the permanent technology faculty.</li>
-          </ul>
-        </div>
+        <div class="timeline">
+          <!-- ── ACADEMIC TRACK ── -->
+          <div>
+            <div class="timeline__col-header">
+              <span class="timeline__col-label timeline__col-label--academic">
+                <i class="fas fa-chalkboard-teacher"></i> Academic Track
+              </span>
+            </div>
 
-        <div class="exp-card exp-card--academic reveal">
-          <span class="exp-card__badge badge--volunteer">Volunteer</span>
-          <div class="exp-card__title">Volunteer Lecturer</div>
-          <div class="exp-card__org">David A. Straz Sinje Technical & Vocational College, UL</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> 2022 — 2024</div>
-          <ul class="exp-card__list">
-            <li>Two years of pro-bono technical instruction across core computing and IT disciplines.</li>
-            <li>Directed hands-on lab sessions to prepare students for industry roles.</li>
-          </ul>
+            <!-- UPDATE: add new teaching roles here as a new .exp-card -->
+            <div class="exp-card exp-card--academic reveal">
+              <span class="exp-card__badge badge--academic">Lecturer</span>
+              <div class="exp-card__title">Part-Time Lecturer</div>
+              <div class="exp-card__org">
+                A. Romeo Horton College of Business & Public Administration, UL
+              </div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> 2019 — 2024
+              </div>
+              <ul class="exp-card__list">
+                <li>
+                  Delivered <em>Introduction to Computer Science</em> to cohorts
+                  of 50+ students — 1,000+ undergraduates reached since 2019.
+                </li>
+                <li>
+                  Taught MS Office for Business (Word, Excel, PowerPoint,
+                  Access).
+                </li>
+                <li>
+                  Independently designed syllabi, lesson plans, and lab
+                  exercises from scratch.
+                </li>
+                <li>
+                  Earned top student evaluations; recommended by the Dean for
+                  the permanent technology faculty.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-card exp-card--academic reveal">
+              <span class="exp-card__badge badge--volunteer">Volunteer</span>
+              <div class="exp-card__title">Volunteer Lecturer</div>
+              <div class="exp-card__org">
+                David A. Straz Sinje Technical & Vocational College, UL
+              </div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> 2022 — 2024
+              </div>
+              <ul class="exp-card__list">
+                <li>
+                  Two years of pro-bono technical instruction across core
+                  computing and IT disciplines.
+                </li>
+                <li>
+                  Directed hands-on lab sessions to prepare students for
+                  industry roles.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── TECHNICAL TRACK ── -->
+          <div>
+            <div class="timeline__col-header">
+              <span class="timeline__col-label timeline__col-label--technical">
+                <i class="fas fa-laptop-code"></i> Technical Track
+              </span>
+            </div>
+
+            <!-- UPDATE: add new professional roles here -->
+            <div class="exp-card exp-card--technical reveal">
+              <span class="exp-card__badge badge--technical"
+                >Records Admin</span
+              >
+              <div class="exp-card__title">Full-Time Records Officer</div>
+              <div class="exp-card__org">
+                Office of Enrollment Services, University of Liberia
+              </div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> 2022 — Present
+              </div>
+              <ul class="exp-card__list">
+                <li>
+                  Manage digital & physical academic records for
+                  <strong>20,000+ active students</strong>.
+                </li>
+                <li>
+                  Generate executive data reports and audit grading databases
+                  for accuracy.
+                </li>
+                <li>
+                  Selected for the fully-funded UL Study Leave Scholarship based
+                  on exemplary performance.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-card exp-card--technical reveal">
+              <span class="exp-card__badge badge--technical"
+                >Software Eng.</span
+              >
+              <div class="exp-card__title">Computer Programmer</div>
+              <div class="exp-card__org">
+                Office of Enrollment Services, University of Liberia
+              </div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> Feb 2017 — 2022
+              </div>
+              <ul class="exp-card__list">
+                <li>
+                  Maintained PHP student management system serving
+                  <strong>70+ staff</strong> & tens of thousands of accounts.
+                </li>
+                <li>
+                  Authored automation scripts that reduced transcript processing
+                  latency significantly.
+                </li>
+                <li>
+                  Collaborated with enterprise vendors on regression testing &
+                  system deployments.
+                </li>
+                <li>
+                  Administered backups, monitored performance, and executed data
+                  recovery procedures.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-card exp-card--technical reveal">
+              <span class="exp-card__badge badge--airport">Infrastructure</span>
+              <div class="exp-card__title">
+                IT Infrastructure & Systems Specialist
+              </div>
+              <div class="exp-card__org">
+                Roberts International Airport (Contractor)
+              </div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> Jan 2016 — Jan 2017
+              </div>
+              <ul class="exp-card__list">
+                <li>
+                  Maintained Windows Server environments and LAN/WAN
+                  infrastructure for the national airport.
+                </li>
+                <li>
+                  Supported <strong>100+ airport personnel</strong> with
+                  hardware/software installation and real-time troubleshooting.
+                </li>
+                <li>
+                  Oversaw data disaster recovery protocols and backup
+                  scheduling.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-card exp-card--technical reveal">
+              <span class="exp-card__badge badge--intern">Internship</span>
+              <div class="exp-card__title">Web Development Intern</div>
+              <div class="exp-card__org">Digi Pace Technology, India</div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> Jun — Aug 2025
+              </div>
+              <p class="exp-card__note">
+                Built production-ready MERN stack apps using Agile methodology
+                and Git workflows in a professional team environment.
+              </p>
+            </div>
+
+            <div class="exp-card exp-card--technical reveal">
+              <span class="exp-card__badge badge--freelance">Freelance</span>
+              <div class="exp-card__title">Independent Web Developer</div>
+              <div class="exp-card__org">
+                Berkshire Household Clearance, UK (Remote)
+              </div>
+              <div class="exp-card__date">
+                <i class="far fa-calendar-alt"></i> Ongoing
+              </div>
+              <p class="exp-card__note">
+                Design, build, and maintain a live responsive business website
+                using HTML5, CSS3, and JavaScript — managed remotely from
+                Liberia.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- ── TECHNICAL TRACK ── -->
-      <div>
-        <div class="timeline__col-header">
-          <span class="timeline__col-label timeline__col-label--technical">
-            <i class="fas fa-laptop-code"></i> Technical Track
-          </span>
-        </div>
-
-        <!-- UPDATE: add new professional roles here -->
-        <div class="exp-card exp-card--technical reveal">
-          <span class="exp-card__badge badge--technical">Records Admin</span>
-          <div class="exp-card__title">Full-Time Records Officer</div>
-          <div class="exp-card__org">Office of Enrollment Services, University of Liberia</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> 2022 — Present</div>
-          <ul class="exp-card__list">
-            <li>Manage digital & physical academic records for <strong>20,000+ active students</strong>.</li>
-            <li>Generate executive data reports and audit grading databases for accuracy.</li>
-            <li>Selected for the fully-funded UL Study Leave Scholarship based on exemplary performance.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card exp-card--technical reveal">
-          <span class="exp-card__badge badge--technical">Software Eng.</span>
-          <div class="exp-card__title">Computer Programmer</div>
-          <div class="exp-card__org">Office of Enrollment Services, University of Liberia</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> Feb 2017 — 2022</div>
-          <ul class="exp-card__list">
-            <li>Maintained PHP student management system serving <strong>70+ staff</strong> & tens of thousands of accounts.</li>
-            <li>Authored automation scripts that reduced transcript processing latency significantly.</li>
-            <li>Collaborated with enterprise vendors on regression testing & system deployments.</li>
-            <li>Administered backups, monitored performance, and executed data recovery procedures.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card exp-card--technical reveal">
-          <span class="exp-card__badge badge--airport">Infrastructure</span>
-          <div class="exp-card__title">IT Infrastructure & Systems Specialist</div>
-          <div class="exp-card__org">Roberts International Airport (Contractor)</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> Jan 2016 — Jan 2017</div>
-          <ul class="exp-card__list">
-            <li>Maintained Windows Server environments and LAN/WAN infrastructure for the national airport.</li>
-            <li>Supported <strong>100+ airport personnel</strong> with hardware/software installation and real-time troubleshooting.</li>
-            <li>Oversaw data disaster recovery protocols and backup scheduling.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card exp-card--technical reveal">
-          <span class="exp-card__badge badge--intern">Internship</span>
-          <div class="exp-card__title">Web Development Intern</div>
-          <div class="exp-card__org">Digi Pace Technology, India</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> Jun — Aug 2025</div>
-          <p class="exp-card__note">Built production-ready MERN stack apps using Agile methodology and Git workflows in a professional team environment.</p>
-        </div>
-
-        <div class="exp-card exp-card--technical reveal">
-          <span class="exp-card__badge badge--freelance">Freelance</span>
-          <div class="exp-card__title">Independent Web Developer</div>
-          <div class="exp-card__org">Berkshire Household Clearance, UK (Remote)</div>
-          <div class="exp-card__date"><i class="far fa-calendar-alt"></i> Ongoing</div>
-          <p class="exp-card__note">Design, build, and maintain a live responsive business website using HTML5, CSS3, and JavaScript — managed remotely from Liberia.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      EDUCATION
 ══════════════════════════════════════════════ -->
-<section id="education" aria-labelledby="education-heading">
-  <div class="container">
-    <div class="reveal">
-      <span class="sec-label">Academic Background</span>
-      <h2 class="sec-title" id="education-heading">Education</h2>
-      <div class="sec-divider"></div>
-    </div>
+    <section
+      class="education-set"
+      id="education"
+      aria-labelledby="education-heading"
+    >
+      <div class="container">
+        <div class="reveal">
+          <span class="sec-label">Academic Background</span>
+          <h2 class="sec-title" id="education-heading">Education</h2>
+          <div class="sec-divider"></div>
+        </div>
 
-    <!-- UPDATE: add a new .edu-card when you earn a new qualification -->
-    <div class="edu__grid reveal">
-      <div class="edu-card">
-        <div class="edu-card__award"><i class="fas fa-award"></i> First Class with Distinction</div>
-        <div class="edu-card__degree">Master of Computer Applications (MCA)</div>
-        <div class="edu-card__school">RK University — School of Engineering, India</div>
-        <div class="edu-card__period"><i class="far fa-calendar-alt"></i> 2024 — 2026</div>
-        <div class="edu-card__details">
-          CGPA <strong>8.45 / 10</strong> &middot; Semester IV SGPA: <strong>9.00</strong><br>
-          Fully-funded placement via the UL competitive Study Leave Scholarship.<br><br>
-          Focus: Full-Stack Architectures, Python Data Science, Java OOP, ASP.NET.
+        <!-- UPDATE: add a new .edu-card when you earn a new qualification -->
+        <div class="edu__grid reveal">
+          <div class="edu-card">
+            <div class="edu-card__award">
+              <i class="fas fa-award"></i> First Class with Distinction
+            </div>
+            <div class="edu-card__degree">
+              Master of Computer Applications (MCA)
+            </div>
+            <div class="edu-card__school">
+              RK University — School of Engineering, India
+            </div>
+            <div class="edu-card__period">
+              <i class="far fa-calendar-alt"></i> 2024 — 2026
+            </div>
+            <div class="edu-card__details">
+              CGPA <strong>8.45 / 10</strong> &middot; Semester IV SGPA:
+              <strong>9.00</strong><br />
+              Fully-funded placement via the UL competitive Study Leave
+              Scholarship.<br /><br />
+              Focus: Full-Stack Architectures, Python Data Science, Java OOP,
+              ASP.NET.
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card__award">
+              <i class="fas fa-check-circle"></i> Completed Full-Time
+            </div>
+            <div class="edu-card__degree">
+              Bachelor of Business Administration (BBA)
+            </div>
+            <div class="edu-card__school">University of Liberia</div>
+            <div class="edu-card__period">
+              <i class="far fa-calendar-alt"></i> 2017 — 2022
+            </div>
+            <div class="edu-card__details">
+              Major: Management &middot; Minor: Public Administration<br />
+              GPA <strong>3.062 / 4.0</strong> — maintained while holding
+              concurrent full-time institutional IT operations.
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card__award">
+              <i class="fas fa-star"></i> Expert Level (★★★)
+            </div>
+            <div class="edu-card__degree">
+              Advanced Diploma in System Engineering
+            </div>
+            <div class="edu-card__school">
+              IPMC College of Technology, Ghana
+            </div>
+            <div class="edu-card__period">
+              <i class="far fa-calendar-alt"></i> 2014 — 2016
+            </div>
+            <div class="edu-card__details" style="margin-bottom: 14px">
+              Microsoft Partner Networks certified. Exam scores:
+            </div>
+            <div class="score-bar">
+              <div class="score-bar__label">
+                <span>CCNA</span><span>92%</span>
+              </div>
+              <div class="score-bar__track">
+                <div
+                  class="score-bar__fill"
+                  style="width: 92%"
+                  data-width="92"
+                ></div>
+              </div>
+            </div>
+            <div class="score-bar">
+              <div class="score-bar__label">
+                <span>Windows Server</span><span>94%</span>
+              </div>
+              <div class="score-bar__track">
+                <div
+                  class="score-bar__fill"
+                  style="width: 94%"
+                  data-width="94"
+                ></div>
+              </div>
+            </div>
+            <div class="score-bar">
+              <div class="score-bar__label">
+                <span>Active Directory</span><span>86%</span>
+              </div>
+              <div class="score-bar__track">
+                <div
+                  class="score-bar__fill"
+                  style="width: 86%"
+                  data-width="86"
+                ></div>
+              </div>
+            </div>
+            <div class="score-bar">
+              <div class="score-bar__label">
+                <span>Linux Systems</span><span>90%</span>
+              </div>
+              <div class="score-bar__track">
+                <div
+                  class="score-bar__fill"
+                  style="width: 90%"
+                  data-width="90"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="edu-card">
-        <div class="edu-card__award"><i class="fas fa-check-circle"></i> Completed Full-Time</div>
-        <div class="edu-card__degree">Bachelor of Business Administration (BBA)</div>
-        <div class="edu-card__school">University of Liberia</div>
-        <div class="edu-card__period"><i class="far fa-calendar-alt"></i> 2017 — 2022</div>
-        <div class="edu-card__details">
-          Major: Management &middot; Minor: Public Administration<br>
-          GPA <strong>3.062 / 4.0</strong> — maintained while holding concurrent full-time institutional IT operations.
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <div class="edu-card__award"><i class="fas fa-star"></i> Expert Level (★★★)</div>
-        <div class="edu-card__degree">Advanced Diploma in System Engineering</div>
-        <div class="edu-card__school">IPMC College of Technology, Ghana</div>
-        <div class="edu-card__period"><i class="far fa-calendar-alt"></i> 2014 — 2016</div>
-        <div class="edu-card__details" style="margin-bottom:14px">
-          Microsoft Partner Networks certified. Exam scores:
-        </div>
-        <div class="score-bar">
-          <div class="score-bar__label"><span>CCNA</span><span>92%</span></div>
-          <div class="score-bar__track"><div class="score-bar__fill" style="width:92%" data-width="92"></div></div>
-        </div>
-        <div class="score-bar">
-          <div class="score-bar__label"><span>Windows Server</span><span>94%</span></div>
-          <div class="score-bar__track"><div class="score-bar__fill" style="width:94%" data-width="94"></div></div>
-        </div>
-        <div class="score-bar">
-          <div class="score-bar__label"><span>Active Directory</span><span>86%</span></div>
-          <div class="score-bar__track"><div class="score-bar__fill" style="width:86%" data-width="86"></div></div>
-        </div>
-        <div class="score-bar">
-          <div class="score-bar__label"><span>Linux Systems</span><span>90%</span></div>
-          <div class="score-bar__track"><div class="score-bar__fill" style="width:90%" data-width="90"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      PROJECTS
 ══════════════════════════════════════════════ -->
-<section id="projects" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)" aria-labelledby="projects-heading">
-  <div class="container">
-    <div class="reveal">
-      <span class="sec-label">Engineering</span>
-      <h2 class="sec-title" id="projects-heading">Selected Projects</h2>
-      <div class="sec-divider"></div>
-    </div>
+    <section
+      class="projects-set"
+      id="projects"
+      style="
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      "
+      aria-labelledby="projects-heading"
+    >
+      <div class="container">
+        <div class="reveal">
+          <span class="sec-label">Engineering</span>
+          <h2 class="sec-title" id="projects-heading">Selected Projects</h2>
+          <div class="sec-divider"></div>
+        </div>
 
-    <!-- UPDATE: add a new .proj-card block for each new project -->
-    <div class="projects__grid reveal">
+        <!-- UPDATE: add a new .proj-card block for each new project -->
+        <div class="projects__grid reveal">
+          <div class="proj-card">
+            <div class="proj-card__tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">OpenAI API</span>
+              <span class="proj-tag">IBM Watson</span>
+            </div>
+            <div class="proj-card__title">AI MailMind Assistant</div>
+            <div class="proj-card__desc">
+              AI-powered automated email response system that interprets
+              incoming inquiries and generates smart, contextual replies. Built
+              with OpenAI API and IBM Watson integration. Dual-certified as the
+              Harvard CS50x Capstone and IBM AI career marker.
+            </div>
+            <div class="proj-card__chips">
+              <span class="proj-chip"
+                ><i class="fab fa-harvard" style="font-size: 0.65rem"></i> CS50x
+                Capstone</span
+              >
+              <span class="proj-chip"
+                ><i class="fab fa-ibm" style="font-size: 0.65rem"></i> IBM
+                Certified</span
+              >
+            </div>
+            <a
+              href="https://github.com/EEDICKSON/ai-email-assistant"
+              target="_blank"
+              rel="noopener"
+              class="proj-card__link"
+            >
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
 
-      <div class="proj-card">
-        <div class="proj-card__tags">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">OpenAI API</span>
-          <span class="proj-tag">IBM Watson</span>
+          <div class="proj-card">
+            <div class="proj-card__tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">MongoDB</span>
+            </div>
+            <div class="proj-card__title">Full-Stack E-Commerce & ERP</div>
+            <div class="proj-card__desc">
+              Comprehensive business management web app featuring interactive
+              inventory control, secure user checkout, and real-time backend
+              analytics. Built on the MERN stack during internship at Digi Pace
+              Technology, India.
+            </div>
+            <div class="proj-card__chips">
+              <span class="proj-chip"
+                ><i class="fas fa-layer-group" style="font-size: 0.65rem"></i>
+                Full MERN Stack</span
+              >
+              <span class="proj-chip"
+                ><i class="fas fa-building" style="font-size: 0.65rem"></i>
+                Enterprise Grade</span
+              >
+            </div>
+            <a
+              href="https://github.com/EEDICKSON/ecom-erp-fullstack"
+              target="_blank"
+              rel="noopener"
+              class="proj-card__link"
+            >
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card__tags">
+              <span class="proj-tag">HTML5</span>
+              <span class="proj-tag">CSS3</span>
+              <span class="proj-tag">JavaScript</span>
+            </div>
+            <div class="proj-card__title">Berkshire Clearance Portal</div>
+            <div class="proj-card__desc">
+              Live production website for a UK commercial clearing enterprise.
+              Semantic HTML5 and optimised CSS deliver fast rendering across all
+              devices — managed remotely from Liberia on an ongoing basis.
+            </div>
+            <div class="proj-card__chips">
+              <span class="proj-chip"
+                ><i class="fas fa-globe" style="font-size: 0.65rem"></i> Live
+                Production</span
+              >
+              <span class="proj-chip"
+                ><i class="fas fa-flag" style="font-size: 0.65rem"></i> UK
+                Client</span
+              >
+            </div>
+            <a
+              href="https://github.com/EEDICKSON/berkshirehousehold-clearance"
+              target="_blank"
+              rel="noopener"
+              class="proj-card__link"
+            >
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <div class="proj-card__title">AI MailMind Assistant</div>
-        <div class="proj-card__desc">
-          AI-powered automated email response system that interprets incoming inquiries and generates
-          smart, contextual replies. Built with OpenAI API and IBM Watson integration.
-          Dual-certified as the Harvard CS50x Capstone and IBM AI career marker.
+
+        <!-- GitHub live stats -->
+        <div class="github-stats reveal" style="margin-top: 32px">
+          <!-- UPDATE: replace EEDICKSON with your GitHub username if it ever changes -->
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=EEDICKSON&show_icons=true&hide_border=true&bg_color=00000000&title_color=2563EB&text_color=6B7280&icon_color=2563EB"
+            alt="Eric's GitHub stats"
+            onerror="this.parentElement.style.display = 'none'"
+            loading="lazy"
+          />
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=EEDICKSON&layout=compact&hide_border=true&bg_color=00000000&title_color=2563EB&text_color=6B7280"
+            alt="Eric's top languages"
+            onerror="this.style.display = 'none'"
+            loading="lazy"
+          />
         </div>
-        <div class="proj-card__chips">
-          <span class="proj-chip"><i class="fab fa-harvard" style="font-size:0.65rem"></i> CS50x Capstone</span>
-          <span class="proj-chip"><i class="fab fa-ibm" style="font-size:0.65rem"></i> IBM Certified</span>
+
+        <!-- Certifications -->
+        <div class="reveal" style="margin-top: 56px">
+          <span class="sec-label">Credentials</span>
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 6px;
+            "
+          >
+            Professional Certifications
+          </h3>
+          <div class="sec-divider"></div>
         </div>
-        <a href="https://github.com/EEDICKSON/ai-email-assistant" target="_blank" rel="noopener" class="proj-card__link">
-          View on GitHub <i class="fas fa-arrow-right"></i>
-        </a>
+
+        <!-- UPDATE: add new cert-card blocks as you earn new certifications -->
+        <div class="certs__grid reveal">
+          <div class="cert-card">
+            <div class="cert-card__icon"><i class="fab fa-harvard"></i></div>
+            <div>
+              <div class="cert-card__name">Harvard University — CS50x</div>
+              <div class="cert-card__issuer">Harvard University, 2026</div>
+              <a
+                href="https://cs50.harvard.edu/certificates/d673d4e8-eded-45d3-8a20-bf1268bec28e"
+                target="_blank"
+                rel="noopener"
+                class="cert-card__link"
+              >
+                Verify <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div
+              class="cert-card__icon"
+              style="background: rgba(0, 122, 204, 0.1); color: #007acc"
+            >
+              <i class="fab fa-ibm"></i>
+            </div>
+            <div>
+              <div class="cert-card__name">
+                IBM AI Professional Specialization
+              </div>
+              <div class="cert-card__issuer">
+                IBM Career Education Network, July 2025
+              </div>
+              <a
+                href="https://ibmcep.cognitiveclass.ai/certificates/82d731f1-0f6f-4b60-8744-567feac23d6f"
+                target="_blank"
+                rel="noopener"
+                class="cert-card__link"
+              >
+                Verify <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div
+              class="cert-card__icon"
+              style="background: rgba(0, 120, 215, 0.1); color: #0078d7"
+            >
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <div>
+              <div class="cert-card__name">MCITP Enterprise Administration</div>
+              <div class="cert-card__issuer">
+                Microsoft Corporation · March 2016 · Serial: NMCITP0101312
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div
+              class="cert-card__icon"
+              style="background: rgba(245, 158, 11, 0.1); color: var(--orange)"
+            >
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div>
+              <div class="cert-card__name">Advanced Diploma — Expert Level</div>
+              <div class="cert-card__issuer">
+                IPMC College of Technology, Ghana · March 2016
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recognitions -->
+        <div class="reveal" style="margin-top: 56px">
+          <span class="sec-label">Honours</span>
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 6px;
+            "
+          >
+            Recognitions & Commitments
+          </h3>
+          <div class="sec-divider"></div>
+        </div>
+
+        <!-- UPDATE: add new recognition cards for awards or honours -->
+        <div class="recognition-strip reveal">
+          <div class="recog-card">
+            <div
+              class="recog-card__icon"
+              style="background: var(--blue-muted); color: var(--blue)"
+            >
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div>
+              <div class="recog-card__title">
+                UL Study Leave Scholar (2024–2026)
+              </div>
+              <div class="recog-card__desc">
+                Fully-funded MCA placement in India, personally endorsed by the
+                President of the University of Liberia based on outstanding
+                institutional performance.
+              </div>
+            </div>
+          </div>
+          <div class="recog-card">
+            <div
+              class="recog-card__icon"
+              style="background: var(--green-muted); color: var(--green)"
+            >
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div>
+              <div class="recog-card__title">Faculty Development Candidate</div>
+              <div class="recog-card__desc">
+                Officially recommended by the Dean of the David A. Straz Sinje
+                Technical &amp; Vocational College to transition into a
+                permanent technology faculty role.
+              </div>
+            </div>
+          </div>
+          <div class="recog-card">
+            <div
+              class="recog-card__icon"
+              style="background: rgba(245, 158, 11, 0.1); color: var(--orange)"
+            >
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div>
+              <div class="recog-card__title">Institutional Commitment</div>
+              <div class="recog-card__desc">
+                Formally committed to returning to the University of Liberia
+                faculty for a minimum of 3 years upon MCA completion — bringing
+                world-class skills home.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="proj-card">
-        <div class="proj-card__tags">
-          <span class="proj-tag">React</span>
-          <span class="proj-tag">Node.js</span>
-          <span class="proj-tag">MongoDB</span>
-        </div>
-        <div class="proj-card__title">Full-Stack E-Commerce & ERP</div>
-        <div class="proj-card__desc">
-          Comprehensive business management web app featuring interactive inventory control,
-          secure user checkout, and real-time backend analytics. Built on the MERN stack
-          during internship at Digi Pace Technology, India.
-        </div>
-        <div class="proj-card__chips">
-          <span class="proj-chip"><i class="fas fa-layer-group" style="font-size:0.65rem"></i> Full MERN Stack</span>
-          <span class="proj-chip"><i class="fas fa-building" style="font-size:0.65rem"></i> Enterprise Grade</span>
-        </div>
-        <a href="https://github.com/EEDICKSON/ecom-erp-fullstack" target="_blank" rel="noopener" class="proj-card__link">
-          View on GitHub <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-card__tags">
-          <span class="proj-tag">HTML5</span>
-          <span class="proj-tag">CSS3</span>
-          <span class="proj-tag">JavaScript</span>
-        </div>
-        <div class="proj-card__title">Berkshire Clearance Portal</div>
-        <div class="proj-card__desc">
-          Live production website for a UK commercial clearing enterprise. Semantic HTML5
-          and optimised CSS deliver fast rendering across all devices — managed
-          remotely from Liberia on an ongoing basis.
-        </div>
-        <div class="proj-card__chips">
-          <span class="proj-chip"><i class="fas fa-globe" style="font-size:0.65rem"></i> Live Production</span>
-          <span class="proj-chip"><i class="fas fa-flag" style="font-size:0.65rem"></i> UK Client</span>
-        </div>
-        <a href="https://github.com/EEDICKSON/berkshirehousehold-clearance" target="_blank" rel="noopener" class="proj-card__link">
-          View on GitHub <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- GitHub live stats -->
-    <div class="github-stats reveal" style="margin-top:32px">
-      <!-- UPDATE: replace EEDICKSON with your GitHub username if it ever changes -->
-      <img
-        src="https://github-readme-stats.vercel.app/api?username=EEDICKSON&show_icons=true&hide_border=true&bg_color=00000000&title_color=2563EB&text_color=6B7280&icon_color=2563EB"
-        alt="Eric's GitHub stats"
-        onerror="this.parentElement.style.display='none'"
-        loading="lazy"
-      />
-      <img
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=EEDICKSON&layout=compact&hide_border=true&bg_color=00000000&title_color=2563EB&text_color=6B7280"
-        alt="Eric's top languages"
-        onerror="this.style.display='none'"
-        loading="lazy"
-      />
-    </div>
-
-    <!-- Certifications -->
-    <div class="reveal" style="margin-top:56px">
-      <span class="sec-label">Credentials</span>
-      <h3 style="font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--text-primary); margin-bottom:6px">
-        Professional Certifications
-      </h3>
-      <div class="sec-divider"></div>
-    </div>
-
-    <!-- UPDATE: add new cert-card blocks as you earn new certifications -->
-    <div class="certs__grid reveal">
-      <div class="cert-card">
-        <div class="cert-card__icon"><i class="fab fa-harvard"></i></div>
-        <div>
-          <div class="cert-card__name">Harvard University — CS50x</div>
-          <div class="cert-card__issuer">Harvard University, 2026</div>
-          <a href="https://cs50.harvard.edu/certificates/d673d4e8-eded-45d3-8a20-bf1268bec28e"
-             target="_blank" rel="noopener" class="cert-card__link">
-            Verify <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-card__icon" style="background:rgba(0,122,204,0.1); color:#007ACC">
-          <i class="fab fa-ibm"></i>
-        </div>
-        <div>
-          <div class="cert-card__name">IBM AI Professional Specialization</div>
-          <div class="cert-card__issuer">IBM Career Education Network, July 2025</div>
-          <a href="https://ibmcep.cognitiveclass.ai/certificates/82d731f1-0f6f-4b60-8744-567feac23d6f"
-             target="_blank" rel="noopener" class="cert-card__link">
-            Verify <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-card__icon" style="background:rgba(0,120,215,0.1); color:#0078D7">
-          <i class="fab fa-microsoft"></i>
-        </div>
-        <div>
-          <div class="cert-card__name">MCITP Enterprise Administration</div>
-          <div class="cert-card__issuer">Microsoft Corporation · March 2016 · Serial: NMCITP0101312</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-card__icon" style="background:rgba(245,158,11,0.1); color:var(--orange)">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <div>
-          <div class="cert-card__name">Advanced Diploma — Expert Level</div>
-          <div class="cert-card__issuer">IPMC College of Technology, Ghana · March 2016</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Recognitions -->
-    <div class="reveal" style="margin-top:56px">
-      <span class="sec-label">Honours</span>
-      <h3 style="font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--text-primary); margin-bottom:6px">
-        Recognitions & Commitments
-      </h3>
-      <div class="sec-divider"></div>
-    </div>
-
-    <!-- UPDATE: add new recognition cards for awards or honours -->
-    <div class="recognition-strip reveal">
-      <div class="recog-card">
-        <div class="recog-card__icon" style="background:var(--blue-muted); color:var(--blue)">
-          <i class="fas fa-trophy"></i>
-        </div>
-        <div>
-          <div class="recog-card__title">UL Study Leave Scholar (2024–2026)</div>
-          <div class="recog-card__desc">Fully-funded MCA placement in India, personally endorsed by the President of the University of Liberia based on outstanding institutional performance.</div>
-        </div>
-      </div>
-      <div class="recog-card">
-        <div class="recog-card__icon" style="background:var(--green-muted); color:var(--green)">
-          <i class="fas fa-chalkboard-teacher"></i>
-        </div>
-        <div>
-          <div class="recog-card__title">Faculty Development Candidate</div>
-          <div class="recog-card__desc">Officially recommended by the Dean of the David A. Straz Sinje Technical &amp; Vocational College to transition into a permanent technology faculty role.</div>
-        </div>
-      </div>
-      <div class="recog-card">
-        <div class="recog-card__icon" style="background:rgba(245,158,11,0.1); color:var(--orange)">
-          <i class="fas fa-handshake"></i>
-        </div>
-        <div>
-          <div class="recog-card__title">Institutional Commitment</div>
-          <div class="recog-card__desc">Formally committed to returning to the University of Liberia faculty for a minimum of 3 years upon MCA completion — bringing world-class skills home.</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      FREELANCE / HIRE ME + GOOGLE FORM
 ══════════════════════════════════════════════ -->
-<section id="freelance" aria-labelledby="freelance-heading">
-  <div class="container">
-    <div class="reveal">
-      <span class="sec-label">Freelance Services</span>
-      <h2 class="sec-title" id="freelance-heading">Need a website built?</h2>
-      <div class="sec-divider"></div>
-    </div>
+    <section
+      class="freelance-set"
+      id="freelance"
+      aria-labelledby="freelance-heading"
+    >
+      <div class="container">
+        <div class="reveal">
+          <span class="sec-label">Freelance Services</span>
+          <h2 class="sec-title" id="freelance-heading">
+            Need a website built?
+          </h2>
+          <div class="sec-divider"></div>
+        </div>
 
-    <div class="freelance__inner reveal">
-      <div>
-        <p style="font-size:1rem; color:var(--text-secondary); margin-bottom:24px; line-height:1.75">
-          I take on a limited number of freelance web projects alongside my academic commitments.
-          Full-stack sites, landing pages, portfolios, business portals — built clean, fast, and
-          tailored to your goals. Fill in the discovery form and I'll respond with an accurate
-          quote within <strong style="color:var(--text-primary)">48 hours</strong>.
-        </p>
+        <div class="freelance__inner reveal">
+          <div>
+            <p
+              style="
+                font-size: 1rem;
+                color: var(--text-secondary);
+                margin-bottom: 24px;
+                line-height: 1.75;
+              "
+            >
+              I take on a limited number of freelance web projects alongside my
+              academic commitments. Full-stack sites, landing pages, portfolios,
+              business portals — built clean, fast, and tailored to your goals.
+              Fill in the discovery form and I'll respond with an accurate quote
+              within
+              <strong style="color: var(--text-primary)">48 hours</strong>.
+            </p>
 
-        <!-- UPDATE: add/remove services as your offerings evolve -->
-        <div class="service-item">
-          <div class="service-item__icon" style="background:var(--blue-muted); color:var(--blue)">
-            <i class="fas fa-code"></i>
+            <!-- UPDATE: add/remove services as your offerings evolve -->
+            <div class="service-item">
+              <div
+                class="service-item__icon"
+                style="background: var(--blue-muted); color: var(--blue)"
+              >
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <div class="service-item__title">
+                  Full-Stack Web Development
+                </div>
+                <div class="service-item__desc">
+                  React, Node.js, MongoDB, PHP — responsive, SEO-ready, and
+                  performance-optimised.
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div
+                class="service-item__icon"
+                style="background: var(--green-muted); color: var(--green)"
+              >
+                <i class="fas fa-robot"></i>
+              </div>
+              <div>
+                <div class="service-item__title">AI Feature Integration</div>
+                <div class="service-item__desc">
+                  OpenAI / LLM-powered features woven into your web app or
+                  business workflow.
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div
+                class="service-item__icon"
+                style="
+                  background: rgba(245, 158, 11, 0.1);
+                  color: var(--orange);
+                "
+              >
+                <i class="fas fa-tools"></i>
+              </div>
+              <div>
+                <div class="service-item__title">
+                  Site Maintenance & Optimisation
+                </div>
+                <div class="service-item__desc">
+                  Speed, security, and ongoing support for existing sites —
+                  managed remotely.
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div
+                class="service-item__icon"
+                style="background: rgba(99, 102, 241, 0.1); color: #6366f1"
+              >
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <div class="service-item__title">
+                  Technical Training & Workshops
+                </div>
+                <div class="service-item__desc">
+                  Web development and AI literacy workshops for teams,
+                  universities, or organisations.
+                </div>
+              </div>
+            </div>
           </div>
+
           <div>
-            <div class="service-item__title">Full-Stack Web Development</div>
-            <div class="service-item__desc">React, Node.js, MongoDB, PHP — responsive, SEO-ready, and performance-optimised.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-item__icon" style="background:var(--green-muted); color:var(--green)">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div>
-            <div class="service-item__title">AI Feature Integration</div>
-            <div class="service-item__desc">OpenAI / LLM-powered features woven into your web app or business workflow.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-item__icon" style="background:rgba(245,158,11,0.1); color:var(--orange)">
-            <i class="fas fa-tools"></i>
-          </div>
-          <div>
-            <div class="service-item__title">Site Maintenance & Optimisation</div>
-            <div class="service-item__desc">Speed, security, and ongoing support for existing sites — managed remotely.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-item__icon" style="background:rgba(99,102,241,0.1); color:#6366F1">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div>
-            <div class="service-item__title">Technical Training & Workshops</div>
-            <div class="service-item__desc">Web development and AI literacy workshops for teams, universities, or organisations.</div>
+            <!-- Native contact form — replace YOUR_FORMSPREE_ID with your actual Formspree endpoint from formspree.io -->
+            <div class="form-embed">
+              <form
+                id="projectForm"
+                action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+                method="POST"
+                style="display: flex; flex-direction: column; gap: 14px"
+              >
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 14px;
+                  "
+                >
+                  <div>
+                    <label
+                      for="fc-name"
+                      style="
+                        display: block;
+                        font-size: 0.78rem;
+                        font-weight: 600;
+                        color: var(--text-secondary);
+                        margin-bottom: 5px;
+                      "
+                      >Full Name *</label
+                    >
+                    <input
+                      id="fc-name"
+                      type="text"
+                      name="name"
+                      required
+                      placeholder="Jane Smith"
+                      style="
+                        width: 100%;
+                        padding: 10px 14px;
+                        border-radius: 8px;
+                        border: 1px solid var(--border);
+                        background: var(--bg);
+                        color: var(--text-primary);
+                        font-size: 0.875rem;
+                        font-family: var(--font-body);
+                        outline: none;
+                        transition: border-color 0.18s ease;
+                      "
+                      onfocus="this.style.borderColor = 'var(--blue)'"
+                      onblur="this.style.borderColor = 'var(--border)'"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="fc-email"
+                      style="
+                        display: block;
+                        font-size: 0.78rem;
+                        font-weight: 600;
+                        color: var(--text-secondary);
+                        margin-bottom: 5px;
+                      "
+                      >Email Address *</label
+                    >
+                    <input
+                      id="fc-email"
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="jane@example.com"
+                      style="
+                        width: 100%;
+                        padding: 10px 14px;
+                        border-radius: 8px;
+                        border: 1px solid var(--border);
+                        background: var(--bg);
+                        color: var(--text-primary);
+                        font-size: 0.875rem;
+                        font-family: var(--font-body);
+                        outline: none;
+                        transition: border-color 0.18s ease;
+                      "
+                      onfocus="this.style.borderColor = 'var(--blue)'"
+                      onblur="this.style.borderColor = 'var(--border)'"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="fc-service"
+                    style="
+                      display: block;
+                      font-size: 0.78rem;
+                      font-weight: 600;
+                      color: var(--text-secondary);
+                      margin-bottom: 5px;
+                    "
+                    >Service Needed *</label
+                  >
+                  <select
+                    id="fc-service"
+                    name="service"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 10px 14px;
+                      border-radius: 8px;
+                      border: 1px solid var(--border);
+                      background: var(--bg);
+                      color: var(--text-primary);
+                      font-size: 0.875rem;
+                      font-family: var(--font-body);
+                      outline: none;
+                      transition: border-color 0.18s ease;
+                      cursor: pointer;
+                    "
+                    onfocus="this.style.borderColor = 'var(--blue)'"
+                    onblur="this.style.borderColor = 'var(--border)'"
+                  >
+                    <option value="" disabled selected>
+                      Select a service…
+                    </option>
+                    <option>Full-Stack Web Development</option>
+                    <option>AI Feature Integration</option>
+                    <option>Site Maintenance &amp; Optimisation</option>
+                    <option>Technical Training &amp; Workshops</option>
+                    <option>Other / Not sure yet</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="fc-budget"
+                    style="
+                      display: block;
+                      font-size: 0.78rem;
+                      font-weight: 600;
+                      color: var(--text-secondary);
+                      margin-bottom: 5px;
+                    "
+                    >Approximate Budget (USD)</label
+                  >
+                  <select
+                    id="fc-budget"
+                    name="budget"
+                    style="
+                      width: 100%;
+                      padding: 10px 14px;
+                      border-radius: 8px;
+                      border: 1px solid var(--border);
+                      background: var(--bg);
+                      color: var(--text-primary);
+                      font-size: 0.875rem;
+                      font-family: var(--font-body);
+                      outline: none;
+                      transition: border-color 0.18s ease;
+                      cursor: pointer;
+                    "
+                    onfocus="this.style.borderColor = 'var(--blue)'"
+                    onblur="this.style.borderColor = 'var(--border)'"
+                  >
+                    <option value="" selected>Prefer not to say</option>
+                    <option>Under $500</option>
+                    <option>$500 – $1,500</option>
+                    <option>$1,500 – $5,000</option>
+                    <option>$5,000+</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="fc-message"
+                    style="
+                      display: block;
+                      font-size: 0.78rem;
+                      font-weight: 600;
+                      color: var(--text-secondary);
+                      margin-bottom: 5px;
+                    "
+                    >Project Description *</label
+                  >
+                  <textarea
+                    id="fc-message"
+                    name="message"
+                    required
+                    rows="5"
+                    placeholder="Tell me about your project — what it does, who it's for, and any deadlines…"
+                    style="
+                      width: 100%;
+                      padding: 10px 14px;
+                      border-radius: 8px;
+                      border: 1px solid var(--border);
+                      background: var(--bg);
+                      color: var(--text-primary);
+                      font-size: 0.875rem;
+                      font-family: var(--font-body);
+                      outline: none;
+                      resize: vertical;
+                      transition: border-color 0.18s ease;
+                      line-height: 1.55;
+                    "
+                    onfocus="this.style.borderColor = 'var(--blue)'"
+                    onblur="this.style.borderColor = 'var(--border)'"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  id="fc-submit"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 12px 28px;
+                    border-radius: 9px;
+                    border: none;
+                    background: var(--blue);
+                    color: #fff;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    font-family: var(--font-body);
+                    cursor: pointer;
+                    transition:
+                      background 0.18s ease,
+                      transform 0.18s ease;
+                  "
+                >
+                  <i class="fas fa-paper-plane"></i> Send Enquiry
+                </button>
+                <div
+                  id="fc-success"
+                  role="alert"
+                  aria-live="polite"
+                  style="
+                    display: none;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    background: var(--green-muted);
+                    border: 1px solid rgba(16, 185, 129, 0.25);
+                    color: var(--green);
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                  "
+                >
+                  <i class="fas fa-check-circle"></i> Message sent! I'll reply
+                  within 48 hours.
+                </div>
+                <div
+                  id="fc-error"
+                  role="alert"
+                  aria-live="polite"
+                  style="
+                    display: none;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    background: rgba(239, 68, 68, 0.08);
+                    border: 1px solid rgba(239, 68, 68, 0.2);
+                    color: #ef4444;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                  "
+                >
+                  <i class="fas fa-exclamation-circle"></i> Something went
+                  wrong. Please email me directly at
+                  <a
+                    href="mailto:e.dickson100@gmail.com"
+                    style="color: inherit; text-decoration: underline"
+                    >e.dickson100@gmail.com</a
+                  >.
+                </div>
+              </form>
+            </div>
+            <p class="form-embed__note">
+              <i
+                class="fas fa-lock"
+                style="color: var(--green); margin-right: 4px"
+              ></i>
+              Your details are used only to discuss your project and are never
+              shared.
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div>
-        <!-- Native contact form — replace YOUR_FORMSPREE_ID with your actual Formspree endpoint from formspree.io -->
-        <div class="form-embed">
-          <form
-            id="projectForm"
-            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-            method="POST"
-            style="display:flex; flex-direction:column; gap:14px;"
-          >
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-              <div>
-                <label for="fc-name" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Full Name *</label>
-                <input id="fc-name" type="text" name="name" required placeholder="Jane Smith"
-                  style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease;"
-                  onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'" />
-              </div>
-              <div>
-                <label for="fc-email" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Email Address *</label>
-                <input id="fc-email" type="email" name="email" required placeholder="jane@example.com"
-                  style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease;"
-                  onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'" />
-              </div>
-            </div>
-            <div>
-              <label for="fc-service" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Service Needed *</label>
-              <select id="fc-service" name="service" required
-                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease; cursor:pointer;"
-                onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'">
-                <option value="" disabled selected>Select a service…</option>
-                <option>Full-Stack Web Development</option>
-                <option>AI Feature Integration</option>
-                <option>Site Maintenance &amp; Optimisation</option>
-                <option>Technical Training &amp; Workshops</option>
-                <option>Other / Not sure yet</option>
-              </select>
-            </div>
-            <div>
-              <label for="fc-budget" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Approximate Budget (USD)</label>
-              <select id="fc-budget" name="budget"
-                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; transition:border-color 0.18s ease; cursor:pointer;"
-                onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'">
-                <option value="" selected>Prefer not to say</option>
-                <option>Under $500</option>
-                <option>$500 – $1,500</option>
-                <option>$1,500 – $5,000</option>
-                <option>$5,000+</option>
-              </select>
-            </div>
-            <div>
-              <label for="fc-message" style="display:block; font-size:0.78rem; font-weight:600; color:var(--text-secondary); margin-bottom:5px;">Project Description *</label>
-              <textarea id="fc-message" name="message" required rows="5" placeholder="Tell me about your project — what it does, who it's for, and any deadlines…"
-                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); font-size:0.875rem; font-family:var(--font-body); outline:none; resize:vertical; transition:border-color 0.18s ease; line-height:1.55;"
-                onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-            </div>
-            <button type="submit" id="fc-submit"
-              style="display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 28px; border-radius:9px; border:none; background:var(--blue); color:#fff; font-size:0.9rem; font-weight:600; font-family:var(--font-body); cursor:pointer; transition:background 0.18s ease, transform 0.18s ease;">
-              <i class="fas fa-paper-plane"></i> Send Enquiry
-            </button>
-            <div id="fc-success" role="alert" aria-live="polite" style="display:none; padding:12px 16px; border-radius:8px; background:var(--green-muted); border:1px solid rgba(16,185,129,0.25); color:var(--green); font-size:0.875rem; font-weight:500;">
-              <i class="fas fa-check-circle"></i> Message sent! I'll reply within 48 hours.
-            </div>
-            <div id="fc-error" role="alert" aria-live="polite" style="display:none; padding:12px 16px; border-radius:8px; background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.2); color:#EF4444; font-size:0.875rem; font-weight:500;">
-              <i class="fas fa-exclamation-circle"></i> Something went wrong. Please email me directly at <a href="mailto:e.dickson100@gmail.com" style="color:inherit; text-decoration:underline;">e.dickson100@gmail.com</a>.
-            </div>
-          </form>
-        </div>
-        <p class="form-embed__note">
-          <i class="fas fa-lock" style="color:var(--green); margin-right:4px"></i>
-          Your details are used only to discuss your project and are never shared.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      CONTACT
 ══════════════════════════════════════════════ -->
-<section id="contact" style="background:var(--surface); border-top:1px solid var(--border)" aria-labelledby="contact-heading">
-  <div class="container">
-    <div class="reveal" style="text-align:center; margin-bottom:40px">
-      <span class="sec-label">Get In Touch</span>
-      <h2 class="sec-title" id="contact-heading">Contact</h2>
-      <p style="color:var(--text-secondary); max-width:480px; margin:0 auto">
-        Open to academic networking, technical consulting, and enterprise web implementation opportunities.
-      </p>
-      <div class="sec-divider" style="margin:20px auto 0"></div>
-    </div>
+    <section
+      class="contact-set"
+      id="contact"
+      style="background: var(--surface); border-top: 1px solid var(--border)"
+      aria-labelledby="contact-heading"
+    >
+      <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: 40px">
+          <span class="sec-label">Get In Touch</span>
+          <h2 class="sec-title" id="contact-heading">Contact</h2>
+          <p
+            style="
+              color: var(--text-secondary);
+              max-width: 480px;
+              margin: 0 auto;
+            "
+          >
+            Open to academic networking, technical consulting, and enterprise
+            web implementation opportunities.
+          </p>
+          <div class="sec-divider" style="margin: 20px auto 0"></div>
+        </div>
 
-    <!-- UPDATE: update contact details if they change -->
-    <div class="contact__grid reveal">
-      <div class="contact-card">
-        <div class="contact-card__icon"><i class="fas fa-envelope"></i></div>
-        <div class="contact-card__label">Personal Email</div>
-        <a href="mailto:e.dickson100@gmail.com">e.dickson100@gmail.com</a>
+        <!-- UPDATE: update contact details if they change -->
+        <div class="contact__grid reveal">
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card__label">Personal Email</div>
+            <a href="mailto:e.dickson100@gmail.com">e.dickson100@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="contact-card__label">Institutional Email</div>
+            <a href="mailto:dicksonee@ul.edu.lr">dicksonee@ul.edu.lr</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-card__label">Phone</div>
+            <a href="tel:+231770309889">+231 770 309 889</a>
+          </div>
+        </div>
+
+        <div class="contact__social reveal">
+          <a
+            href="https://github.com/EEDICKSON"
+            target="_blank"
+            rel="noopener"
+            class="social-btn"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <!-- UPDATE: replace # with your actual LinkedIn profile URL, e.g. https://linkedin.com/in/your-handle -->
+          <a
+            href="https://linkedin.com/in/eric-edwin-dickson"
+            target="_blank"
+            rel="noopener"
+            class="social-btn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="#freelance"
+            class="social-btn"
+            style="
+              background: var(--blue);
+              color: #fff;
+              border-color: var(--blue);
+            "
+          >
+            <i class="fas fa-briefcase"></i> Start a Project
+          </a>
+          <!-- UPDATE: confirm resume.pdf is at the repo root, or replace with absolute URL -->
+          <a href="resume.pdf" download class="social-btn">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+
+        <p
+          style="
+            text-align: center;
+            margin-top: 28px;
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+          "
+        >
+          Professional and academic references available immediately upon
+          request.
+        </p>
       </div>
-      <div class="contact-card">
-        <div class="contact-card__icon"><i class="fas fa-university"></i></div>
-        <div class="contact-card__label">Institutional Email</div>
-        <a href="mailto:dicksonee@ul.edu.lr">dicksonee@ul.edu.lr</a>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
-        <div class="contact-card__label">Phone</div>
-        <a href="tel:+231770309889">+231 770 309 889</a>
-      </div>
-    </div>
+    </section>
 
-    <div class="contact__social reveal">
-      <a href="https://github.com/EEDICKSON" target="_blank" rel="noopener" class="social-btn">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <!-- UPDATE: replace # with your actual LinkedIn profile URL, e.g. https://linkedin.com/in/your-handle -->
-      <a href="https://linkedin.com/in/eric-edwin-dickson" target="_blank" rel="noopener" class="social-btn">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="#freelance" class="social-btn" style="background:var(--blue); color:#fff; border-color:var(--blue)">
-        <i class="fas fa-briefcase"></i> Start a Project
-      </a>
-      <!-- UPDATE: confirm resume.pdf is at the repo root, or replace with absolute URL -->
-      <a href="resume.pdf" download class="social-btn">
-        <i class="fas fa-download"></i> Download CV
-      </a>
-    </div>
-
-    <p style="text-align:center; margin-top:28px; font-size:0.8rem; color:var(--text-tertiary)">
-      Professional and academic references available immediately upon request.
-    </p>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════ -->
-<footer>
-  <div class="container">
-    <p style="font-size:1.1rem; font-family:var(--font-display); font-weight:700; color:var(--text-primary); margin-bottom:8px">EED.</p>
-    <p>© 2026 Eric Edwin Dickson · Hand-crafted with semantic web standards.</p>
-    <p>University of Liberia · Fendall Campus · Liberia, West Africa</p>
-  </div>
-</footer>
+    <footer>
+      <div class="container">
+        <p
+          style="
+            font-size: 1.1rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+          "
+        >
+          EED.
+        </p>
+        <p>
+          © 2026 Eric Edwin Dickson · Hand-crafted with semantic web standards.
+        </p>
+        <p>University of Liberia · Fendall Campus · Liberia, West Africa</p>
+      </div>
+    </footer>
 
 
 <script>
